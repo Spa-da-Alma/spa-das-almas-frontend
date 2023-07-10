@@ -9,5 +9,9 @@
 }
 
 .title {
-  @apply text-2xl text-center uppercase my-6 font-medium py-8 border-y-2 border-y-gray-200;
+  @apply text-xl md:text-2xl text-center uppercase my-6 font-medium py-8 border-y-2 border-y-gray-200;
+}
+
+.grid-image {
+  @apply h-full w-full object-cover rounded-md;
 }

@@ -20,6 +20,14 @@ const messages = {
       },
       titles: {
         reviews: "What our guests comment",
+        facilities: "get to know our facilities",
+        services: "Services",
+      },
+      services: {
+        breakfast: "Breakfast",
+        wifi: "Free Wifi",
+        massages: "Massages",
+        pool: "Pool",
       },
     },
   },

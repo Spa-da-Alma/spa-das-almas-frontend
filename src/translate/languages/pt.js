@@ -20,6 +20,14 @@ const messages = {
       },
       titles: {
         reviews: "O que os nossos hóspedes comentam",
+        facilities: "Conheça nossas instalações",
+        services: "Serviços",
+      },
+      services: {
+        breakfast: "Café da manhã",
+        wifi: "Wifi grátis",
+        massages: "Massagens",
+        pool: "Piscina",
       },
     },
   },
