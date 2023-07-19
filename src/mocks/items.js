@@ -1,19 +1,20 @@
-import { GoHomeFill } from "react-icons/go";
+import { AiFillHome } from "react-icons/ai";
 import { HiLocationMarker } from "react-icons/hi";
-import { BsHouseHeartFill } from "react-icons/bs";
+import { MdCottage } from "react-icons/md";
 import { PiSunglassesFill } from "react-icons/pi";
-import { BsFillChatSquareHeartFill } from "react-icons/bs";
+import { BsFillChatSquareHeartFill, BsEmojiSunglassesFill } from "react-icons/bs";
+import { SiFunimation } from "react-icons/si"
 import { i18n } from "../translate/i18n";
 
 export default [
   {
     name: i18n.t("items.home"),
-    icon: GoHomeFill,
+    icon: AiFillHome,
     path: "",
   },
   {
     name: i18n.t("items.cottage"),
-    icon: BsHouseHeartFill,
+    icon: MdCottage,
     path: "chales",
   },
   {
@@ -23,7 +24,7 @@ export default [
   },
   {
     name: i18n.t("items.leisure"),
-    icon: PiSunglassesFill,
+    icon: SiFunimation,
     path: "/",
   },
   {

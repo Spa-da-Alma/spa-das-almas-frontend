@@ -7,10 +7,11 @@ const messages = {
       },
       items: {
         home: "Home Page",
-        cottage: "Cottages",
+        cottage: "Chalets",
         location: "Location",
         leisure: "Leisure",
         book: "Book",
+        services: "Services",
       },
       review: {
         first: `“I really loved the accommodation, we went to celebrate our wedding anniversary, it was perfect!!! all the details of the accommodation, the care of the staff, the breakfast in the room! it was so worth it!!!”`,
@@ -22,12 +23,17 @@ const messages = {
         reviews: "What our guests comment",
         facilities: "get to know our facilities",
         services: "Services",
+        location: "Location",
       },
       services: {
         breakfast: "Breakfast",
         wifi: "Free Wifi",
         massages: "Massages",
         pool: "Pool",
+      },
+      footer: {
+        social_media: "Social media",
+        contact_us: "Contact us",
       },
     },
   },

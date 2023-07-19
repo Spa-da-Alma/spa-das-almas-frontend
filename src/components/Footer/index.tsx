@@ -22,7 +22,7 @@ function Footer() {
       <div className=" flex flex-col md:flex-row justify-center md:justify-evenly gap-4">
         <div>
           <h3 className="after:content-[''] after:block after:bg-white after:w-[50px] after:h-[2px] after:mt-1 text-white mb-4">
-            Nossas redes sociais
+          {i18n.t("footer.social_media")}
           </h3>
           <ul className="my-2 flex flex-col gap-2">
             <li>
@@ -50,17 +50,17 @@ function Footer() {
 
         <div>
           <h3 className="after:content-[''] after:block after:bg-white after:w-[50px] after:h-[2px] after:mt-1 text-white mb-4">
-            Entre em contato
+          {i18n.t("footer.contact_us")}
           </h3>
           <ul className="my-2 flex flex-col gap-2">
             <li>
-              <a href="" className="flex gap-2">
+              <a className="flex gap-2">
                 <HiMail size={24} color="white" />
                 <span className="text-gray-400">contato@spadasalmas.com</span>
               </a>
             </li>
             <li>
-              <a href="" className="flex gap-2">
+              <a className="flex gap-2">
                 <AiFillPhone size={24} color="white" />
                 <span className="text-gray-400">+55 (032) 3333-3333</span>
               </a>

@@ -11,6 +11,7 @@ const messages = {
         location: "Localização",
         leisure: "Lazer",
         book: "Reservar",
+        services: "Serviços",
       },
       review: {
         first: `“Amei muito a acomodação, fomos comemorar aniversário de casamento, foi perfeito!!! todos os detalhes da acomodação, o cuidado dos funcionários, o café da manhã no quarto! valeu muito a pena!!!”`,
@@ -22,12 +23,17 @@ const messages = {
         reviews: "O que os nossos hóspedes comentam",
         facilities: "Conheça nossas instalações",
         services: "Serviços",
+        location: "Localização",
       },
       services: {
         breakfast: "Café da manhã",
         wifi: "Wifi grátis",
         massages: "Massagens",
         pool: "Piscina",
+      },
+      footer: {
+        social_media: "Nossas redes sociais",
+        contact_us: "Entre em contato",
       },
     },
   },
