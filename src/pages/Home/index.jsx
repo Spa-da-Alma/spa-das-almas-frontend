@@ -6,6 +6,7 @@ import { i18n } from "../../translate/i18n";
 import ReviewCard from "./components/ReviewCard";
 import { Link } from "react-router-dom";
 import services from "../../mocks/services";
+import { MdOutlineArrowForwardIos } from "react-icons/md";
 
 function Home() {
   const settings = {
@@ -51,65 +52,34 @@ function Home() {
             ))}
           </Slider>
         </div>
-        <h3 className="title">{i18n.t("titles.facilities")}</h3>
-        <div className="flex flex-col md: justify-between">
-          <div className="flex flex-col">
-            <div className="grid grid-cols-4 grid-rows-2 h-[300px] md:h-[400px] z-0 gap-2 overflow-hidden">
-              <img
-                src="/assets/facilities/foto1.jpg"
-                alt=""
-                className="grid-image"
-              />
-              <img
-                src="/assets/facilities/foto3.jpg"
-                alt=""
-                className="grid-image"
-              />
-              <img
-                src="/assets/facilities/foto4.jpg"
-                alt=""
-                className="grid-image hidden"
-              />
-              <img
-                src="/assets/facilities/foto5.jpg"
-                alt=""
-                className="grid-image col-span-2"
-              />
-              <img
-                src="/assets/facilities/foto2.jpg"
-                alt=""
-                className="col-span-2 grid-image"
-              />
-              <img
-                src="/assets/facilities/foto1.jpg"
-                alt=""
-                className="grid-image"
-              />
-              <img
-                src="/assets/facilities/foto1.jpg"
-                alt=""
-                className="grid-image"
-              />
-            </div>
-            <Link
-              to={"/chales"}
-              className="bg-gray-800 rounded-md text-center mt-4 py-4 px-6 texl-lg text-white"
+        <div>
+          <h3 className="title">Conheça nossas instalações</h3>
+          <Link to="/chales">
+            <div
+              className="w-full h-[300px] rounded-md p-4"
+              style={{
+                backgroundImage: 'url("/assets/calls/chalepronto.jpg")',
+                backgroundRepeat: "no-repeat",
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+              }}
             >
-              Conhecer agora
-            </Link>
-          </div>
-          <h3 className="title">{i18n.t("titles.services")}</h3>
-          <div className="flex flex-wrap gap-y-6 md:justify-center md:items-center md:gap-x-16 my-4">
-            {services.map((item, index) => (
-              <div
-                key={index}
-                className="flex flex-col w-1/2 md:w-auto justify-center items-center"
-              >
-                <item.icon size={30} className="" color="#1f2937" />
-                <p className="text-xl">{item.name}</p>
+              <div className="flex items-center gap-4">
+                <h3 className="text-white text-2xl">Chalés</h3>
+                <MdOutlineArrowForwardIos size={24} color="white" />
               </div>
-            ))}
-          </div>
+            </div>
+          </Link>
+        </div>
+      </div>
+      <div>
+        <h3 className="title">Localização</h3>
+        <div>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d5051.144008075224!2d-46.021924555312545!3d-22.863270661739612!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cc104a3a67a26b%3A0x34aa88739c7f0e92!2sHospedagem%20Spa%20da%20Alma!5e0!3m2!1sen!2sbr!4v1689790413916!5m2!1sen!2sbr"
+            width="100%"
+            height="450"
+          ></iframe>
         </div>
       </div>
     </>
