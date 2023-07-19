@@ -57,16 +57,22 @@ function Header() {
               <MdOutlineKeyboardArrowDown size={20} />
             )}
           </div>
+          <img src="" alt="" />
           {activeSelect && (
             <div className="border-2 border-neutral-100 rounded-lg absolute left-0 top-[120%] flex flex-col w-full overflow-hidden">
               {languages.map((item, index) => (
-                <span
-                  className="bg-white hover:bg-[#fafafa] py-4 pl-4 flex-1 z-10"
+                <div
                   key={index}
+                  className="flex items-center gap-2 bg-white hover:bg-[#fafafa] px-4 py-6 z-10"
                   onClick={() => handleSelectChange(item.language)}
                 >
-                  {item.language}
-                </span>
+                  <img
+                    src={item.flag}
+                    alt=""
+                    className="w-8 h-5 object-cover"
+                  />
+                  <span>{item.language}</span>
+                </div>
               ))}
             </div>
           )}

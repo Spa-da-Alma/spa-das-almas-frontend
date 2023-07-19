@@ -35,7 +35,7 @@ function Home() {
   const callAction = [
     { name: "Chalés", path: "/chales", image: "chales.jpg" },
     { name: "Lazer", path: "/chales", image: "lazer.jpg" },
-    { name: "Serviços", path: "/chales", image: "services.jpg" },
+    { name: "Serviços", path: "/chales", image: "servicos.jpg" },
   ];
 
   return (
@@ -48,8 +48,10 @@ function Home() {
           }}
         ></div>
       </div>
-      <div className="p-4 md:px-8 lg:px-12">
-        <h3 className="title">{i18n.t("titles.reviews")}</h3>
+      <div className="">
+        <div className="p-4 md:px-8 lg:px-12">
+          <h3 className="title">{i18n.t("titles.reviews")}</h3>
+        </div>
         <div className="max-w-full overflow-hidden">
           <Slider {...settings}>
             {reviews.map((item, index) => (
@@ -57,7 +59,7 @@ function Home() {
             ))}
           </Slider>
         </div>
-        <div>
+        <div className="p-4 md:px-8 lg:px-12">
           <h3 className="title">Conheça nossas instalações</h3>
           <div className="flex flex-col gap-6 md:flex-row">
             {callAction.map((action, index) => (
@@ -89,16 +91,14 @@ function Home() {
             ))}
           </div>
         </div>
-        <h3 className="title">Localização</h3>
-      </div>
-      <div>
-        <div>
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d5051.144008075224!2d-46.021924555312545!3d-22.863270661739612!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cc104a3a67a26b%3A0x34aa88739c7f0e92!2sHospedagem%20Spa%20da%20Alma!5e0!3m2!1sen!2sbr!4v1689790413916!5m2!1sen!2sbr"
-            width="100%"
-            height="450"
-          ></iframe>
+        <div className="p-4 md:px-8 lg:px-12">
+          <h3 className="title ">Localização</h3>
         </div>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d5051.144008075224!2d-46.021924555312545!3d-22.863270661739612!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cc104a3a67a26b%3A0x34aa88739c7f0e92!2sHospedagem%20Spa%20da%20Alma!5e0!3m2!1sen!2sbr!4v1689790413916!5m2!1sen!2sbr"
+          width="100%"
+          height="450"
+        ></iframe>
       </div>
     </>
   );
