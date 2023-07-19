@@ -5,7 +5,6 @@ import reviews from "../../mocks/reviews";
 import { i18n } from "../../translate/i18n";
 import ReviewCard from "./components/ReviewCard";
 import { Link } from "react-router-dom";
-import services from "../../mocks/services";
 import { MdOutlineArrowForwardIos } from "react-icons/md";
 
 function Home() {
@@ -33,6 +32,12 @@ function Home() {
     ],
   };
 
+  const callAction = [
+    { name: "Chalés", path: "/chales", image: "chales.jpg" },
+    { name: "Lazer", path: "/chales", image: "lazer.jpg" },
+    { name: "Serviços", path: "/chales", image: "services.jpg" },
+  ];
+
   return (
     <>
       <div className="relative">
@@ -54,26 +59,39 @@ function Home() {
         </div>
         <div>
           <h3 className="title">Conheça nossas instalações</h3>
-          <Link to="/chales">
-            <div
-              className="w-full h-[300px] rounded-md p-4"
-              style={{
-                backgroundImage: 'url("/assets/calls/chalepronto.jpg")',
-                backgroundRepeat: "no-repeat",
-                backgroundSize: "cover",
-                backgroundPosition: "center",
-              }}
-            >
-              <div className="flex items-center gap-4">
-                <h3 className="text-white text-2xl">Chalés</h3>
-                <MdOutlineArrowForwardIos size={24} color="white" />
-              </div>
-            </div>
-          </Link>
+          <div className="flex flex-col gap-6 md:flex-row">
+            {callAction.map((action, index) => (
+              <Link to={action.path} className="md:w-[33%]" key={index}>
+                <div
+                  className="w-full h-[300px] md:h-[350px] lg:h-[400px] rounded-md"
+                  style={{
+                    backgroundImage: `url("/assets/calls/${action.image}")`,
+                    backgroundRepeat: "no-repeat",
+                    backgroundSize: "cover",
+                    backgroundPosition: "center",
+                  }}
+                >
+                  <div className="flex gap-4 h-full hover:gap-6 transition-all p-4  items-end">
+                    <h3
+                      className="text-white text-2xl"
+                      style={{ textShadow: "2px 2px rgb(0 0 0 / 38%)" }}
+                    >
+                      {action.name}
+                    </h3>
+                    <MdOutlineArrowForwardIos
+                      size={24}
+                      color="white"
+                      style={{ marginTop: "3px" }}
+                    />
+                  </div>
+                </div>
+              </Link>
+            ))}
+          </div>
         </div>
+        <h3 className="title">Localização</h3>
       </div>
       <div>
-        <h3 className="title">Localização</h3>
         <div>
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d5051.144008075224!2d-46.021924555312545!3d-22.863270661739612!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cc104a3a67a26b%3A0x34aa88739c7f0e92!2sHospedagem%20Spa%20da%20Alma!5e0!3m2!1sen!2sbr!4v1689790413916!5m2!1sen!2sbr"
