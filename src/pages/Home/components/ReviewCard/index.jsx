@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { i18n } from "../../../../translate/i18n";
 import { ImQuotesLeft, ImQuotesRight } from "react-icons/im";
 
 function ReviewCard({ name, photo, review, platform }) {
@@ -37,7 +38,7 @@ function ReviewCard({ name, photo, review, platform }) {
           />
         </div>
         <p className="text-md text-gray-400 mt-auto">
-          Review retirado do{" "}
+          {i18n.t("review.from")}{" "}
           <span className="text-gray-900 font-medium">{platform}</span>
         </p>
       </div>

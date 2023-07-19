@@ -14,6 +14,7 @@ const messages = {
         services: "Serviços",
       },
       review: {
+        from: "review retirado do",
         first: `Amei muito a acomodação, fomos comemorar aniversário de casamento, foi perfeito!!! todos os detalhes da acomodação, o cuidado dos funcionários, o café da manhã no quarto! valeu muito a pena!!!`,
         second: `Atenção especial do nosso gerente, que os explicou tudo direitinho, nos deixando também à vontade. Café da manhã entregue no chalé no horário que você escolhe.Lareira e ofurô. Não fica melhor que isso!`,
         tertiary: `Local muito bacana, as casas dos hóspedes são bem legais também, e o atendimento foi muito bom. Banheira de hidro enorme e café da manhã no quarto, bem caprichado. Não faltou nada no quarto!`,
