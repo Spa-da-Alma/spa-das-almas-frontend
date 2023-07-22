@@ -6,7 +6,7 @@ import { i18n } from "../../translate/i18n";
 function Footer() {
   return (
     <footer className="bg-gray-800 px-4 py-6 flex flex-col">
-      <div className="flex items-center gap-4 text-white mb-6 md:mx-auto">
+      <div className="flex items-center gap-4 text-white mb-8 md:mx-auto">
         <img
           src="/logotipo.png"
           alt="Spa das Almas"
@@ -22,7 +22,7 @@ function Footer() {
       <div className=" flex flex-col md:flex-row justify-center md:justify-evenly gap-4">
         <div>
           <h3 className="after:content-[''] after:block after:bg-white after:w-[50px] after:h-[2px] after:mt-1 text-white mb-4">
-          {i18n.t("footer.social_media")}
+            {i18n.t("footer.social_media")}
           </h3>
           <ul className="my-2 flex flex-col gap-2">
             <li>
@@ -50,7 +50,7 @@ function Footer() {
 
         <div>
           <h3 className="after:content-[''] after:block after:bg-white after:w-[50px] after:h-[2px] after:mt-1 text-white mb-4">
-          {i18n.t("footer.contact_us")}
+            {i18n.t("footer.contact_us")}
           </h3>
           <ul className="my-2 flex flex-col gap-2">
             <li>

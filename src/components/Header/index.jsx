@@ -40,7 +40,11 @@ function Header() {
           onClick={() => setActiveMenu(!activeMenu)}
         >
           {activeMenu ? (
-            <AiOutlineClose size={30} color="#0f172a" />
+            <AiOutlineClose
+              size={30}
+              color="#0f172a"
+              className="fixed right-4 top-8"
+            />
           ) : (
             <AiOutlineMenu size={30} color="#0f172a" />
           )}
