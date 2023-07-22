@@ -1,5 +1,6 @@
 import React from "react";
-import { AiFillInstagram, AiFillFacebook, AiFillPhone } from "react-icons/ai";
+import { AiFillInstagram, AiFillFacebook } from "react-icons/ai";
+import { IoLogoWhatsapp } from "react-icons/io";
 import { HiMail } from "react-icons/hi";
 import { i18n } from "../../translate/i18n";
 
@@ -61,8 +62,8 @@ function Footer() {
             </li>
             <li>
               <a className="flex gap-2">
-                <AiFillPhone size={24} color="white" />
-                <span className="text-gray-400">+55 (032) 3333-3333</span>
+                <IoLogoWhatsapp size={24} color="white" />
+                <span className="text-gray-400">+55 (35) 3438-1131</span>
               </a>
             </li>
           </ul>
