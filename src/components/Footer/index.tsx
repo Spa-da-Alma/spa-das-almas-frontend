@@ -1,5 +1,6 @@
 import React from "react";
-import { AiFillInstagram, AiFillFacebook, AiFillPhone } from "react-icons/ai";
+import { AiFillInstagram, AiFillFacebook } from "react-icons/ai";
+import { IoLogoWhatsapp } from "react-icons/io";
 import { HiMail } from "react-icons/hi";
 import { i18n } from "../../translate/i18n";
 
@@ -14,7 +15,7 @@ function Footer() {
         />
         <div>
           <h2 className="text-lg md:text-xl uppercase font-medium">
-            Spa das Almas
+            Spa da Alma
           </h2>
           <p className="text-sm md:text-md">{i18n.t("slogan")}</p>
         </div>
@@ -32,7 +33,7 @@ function Footer() {
                 target="_blank"
               >
                 <AiFillInstagram size={24} color="white" />
-                <span className="text-gray-400">@spadasalmas</span>
+                <span className="text-gray-400">@spadaalmamv</span>
               </a>
             </li>
             <li>
@@ -42,7 +43,7 @@ function Footer() {
                 target="_blank"
               >
                 <AiFillFacebook size={24} color="white" />
-                <span className="text-gray-400">/aspadasalmas</span>
+                <span className="text-gray-400">/hospedagemspadaalma</span>
               </a>
             </li>
           </ul>
@@ -61,8 +62,8 @@ function Footer() {
             </li>
             <li>
               <a className="flex gap-2">
-                <AiFillPhone size={24} color="white" />
-                <span className="text-gray-400">+55 (032) 3333-3333</span>
+                <IoLogoWhatsapp size={24} color="white" />
+                <span className="text-gray-400">+55 (35) 3438-1131</span>
               </a>
             </li>
           </ul>

@@ -14,6 +14,7 @@ const messages = {
         services: "Services",
       },
       review: {
+        from: "review taken from",
         first: `“I really loved the accommodation, we went to celebrate our wedding anniversary, it was perfect!!! all the details of the accommodation, the care of the staff, the breakfast in the room! it was so worth it!!!”`,
         second: `“Special attention from our manager, who explained everything in detail, making us feel at ease. Breakfast delivered to the chalet at the time you choose. Fireplace and hot tub. It doesn't get better than this!”`,
         tertiary: `“Very nice place, the guest houses are very nice too, and the service was very good. Huge hydro bath and breakfast in the room, very neat. There was nothing missing in the room!”`,

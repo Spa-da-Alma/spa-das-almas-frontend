@@ -30,7 +30,7 @@ function Header() {
           />
           <div>
             <h1 className="text-lg md:text-xl uppercase font-medium">
-              Spa das Almas
+              Spa da Alma
             </h1>
             <p className="text-sm md:text-md">{i18n.t("slogan")}</p>
           </div>
