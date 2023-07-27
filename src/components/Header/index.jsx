@@ -83,7 +83,7 @@ function Header() {
         </div>
         {activeMenu && (
           <div
-            className="fixed min-h-screen w-[60vw] right-0 top-0 shadow-xl pt-[30%] px-6 pb-6 z-10 bg-white md:hidden "
+            className="fixed min-h-screen w-[60vw] right-0 top-0 shadow-xl pt-[30%] px-6 pb-6 z-10 bg-white md:hidden"
             onBlur={() => setActiveMenu(false)}
           >
             <ul className="flex flex-col gap-4">

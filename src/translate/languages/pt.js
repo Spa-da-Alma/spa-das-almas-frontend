@@ -26,12 +26,13 @@ const messages = {
         facilities: "Conheça nossas instalações",
         services: "Serviços",
         location: "Localização",
+        differentials: "Diferenciais",
       },
-      services: {
-        breakfast: "Café da manhã",
+      differentials: {
+        breakfast: "Café da manhã servido no quarto",
         wifi: "Wifi grátis",
         massages: "Massagens",
-        pool: "Piscina",
+        pet: "Pet-Friendly",
       },
       footer: {
         social_media: "Nossas redes sociais",

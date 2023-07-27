@@ -10,7 +10,7 @@ function ReviewCard({ name, photo, review, platform }) {
       transition={{ duration: 1 }}
       className="m-4 md:m-10"
     >
-      <div className="bg-white rounded-lg p-6 h-[440px] cursor-pointer flex flex-col gap-4 transition-shadow duration-300 shadow-md hover:shadow-xl">
+      <div className="bg-white rounded-lg p-6 h-[400px] cursor-pointer flex flex-col gap-4 transition-shadow duration-300 shadow-md hover:shadow-xl">
         <div className="flex items-center gap-4">
           <img src={photo} alt="" className="rounded-full w-16 h-16" />
           <div>

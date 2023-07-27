@@ -2,10 +2,12 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import reviews from "../../mocks/reviews";
+import differentials from "../../mocks/differentials";
 import { i18n } from "../../translate/i18n";
 import ReviewCard from "./components/ReviewCard";
 import { Link } from "react-router-dom";
 import { MdOutlineArrowForwardIos } from "react-icons/md";
+import items from "../../mocks/items";
 
 function Home() {
   const settings = {
@@ -42,9 +44,9 @@ function Home() {
     <>
       <div className="relative">
         <div
-          className="h-[60vh] max-w-screen z-0 bg-fixed bg-cover bg-no-repeat bg-center"
+          className="h-[60vh] max-w-screen z-0 bg-fixed bg-contain bg-no-repeat bg-center"
           style={{
-            backgroundImage: `url('/assets/monteverde.jpg')`,
+            backgroundImage: `url('/assets/reception.jpg')`,
           }}
         ></div>
       </div>
@@ -90,6 +92,19 @@ function Home() {
               </Link>
             ))}
           </div>
+        </div>
+        <div className="p-4 md:px-8 lg:px-12">
+          <h3 className="title">{i18n.t("titles.differentials")}</h3>
+        </div>
+        <div>
+          <ul className="grid grid-cols-2 grid-flow-row md:flex md:justify-center md:items-center gap-5">
+            {differentials.map((differential, index) => (
+              <li className="flex flex-col text-center items-center gap-2" key={index}>
+                <span className="text-[#1f2937]">{differential.icon && <differential.icon size={35} />}</span>
+                <p className="text-lg text-[#1f2937]">{differential.name}</p> 
+              </li>
+            ))}
+          </ul>
         </div>
         <div className="p-4 md:px-8 lg:px-12">
           <h3 className="title">{i18n.t("titles.location")}</h3>
