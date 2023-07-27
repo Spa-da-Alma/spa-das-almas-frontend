@@ -8,7 +8,8 @@ export default [
     icon: FaWifi,
   },
   {
-    name: i18n.t("differentials.breakfast"),
+    name: i18n.t("differentials.breakfast.primary"),
+    name_secundary: i18n.t("differentials.breakfast.secundary"),
     icon: FaCoffee,
   },
   {

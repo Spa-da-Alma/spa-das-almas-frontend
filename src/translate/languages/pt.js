@@ -29,7 +29,10 @@ const messages = {
         differentials: "Nossos diferenciais",
       },
       differentials: {
-        breakfast: "Café da manhã servido no quarto",
+        breakfast: {
+          primary: "Café da manhã",
+          secundary: "servido no quarto",
+        },
         wifi: "Wifi grátis",
         massages: "Massagens",
         pet: "Pet-Friendly",
