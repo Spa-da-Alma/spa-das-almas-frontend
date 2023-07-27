@@ -15,10 +15,11 @@ const messages = {
       },
       review: {
         from: "review taken from",
-        first: `“I really loved the accommodation, we went to celebrate our wedding anniversary, it was perfect!!! all the details of the accommodation, the care of the staff, the breakfast in the room! it was so worth it!!!”`,
-        second: `“Special attention from our manager, who explained everything in detail, making us feel at ease. Breakfast delivered to the chalet at the time you choose. Fireplace and hot tub. It doesn't get better than this!”`,
-        tertiary: `“Very nice place, the guest houses are very nice too, and the service was very good. Huge hydro bath and breakfast in the room, very neat. There was nothing missing in the room!”`,
-        quartenary: `“Beautiful place, wonderful view, towels changed daily and breakfast delivered to the room with every care make the stay pleasant and perfect to spend with the family and take your dog. Felipe welcomed us and did an excellent job throughout our stay.”`,
+        first: `We loved the privacy of the cottage, the bedding, the bed, bathroom, bathtub, decoration, amenities, shower. All the staff attended us super well, were helpful, polite and always ready for any request. All congratulations!`,
+        second: `Very nice environment, quiet, clean and very well organized. The staff are excellent and very polite and helpful. I would definitely come back more often.`,
+        tertiary: `Very good service. Taking all my doubts. Very good service. The staff were always very attentive and helpful in everything we needed.`,
+        quartenary: `Great service! All staff super helpful and attentive! Congratulations on the team! Very clean, organized and all brand new! I intend to return more often to enjoy more.`,
+        quinary: `We loved the cottage, super comfortable, cozy and warm.`,
       },
       titles: {
         reviews: "What our guests comment",

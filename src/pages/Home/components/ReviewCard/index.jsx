@@ -37,10 +37,10 @@ function ReviewCard({ name, photo, review, platform }) {
             className="inline mb-3 ml-4"
           />
         </div>
-        <p className="text-md text-gray-400 mt-auto">
+        {/* <p className="text-md text-gray-400 mt-auto">
           {i18n.t("review.from")}{" "}
           <span className="text-gray-900 font-medium">{platform}</span>
-        </p>
+        </p> */}
       </div>
     </motion.div>
   );
