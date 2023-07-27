@@ -26,7 +26,7 @@ const messages = {
         facilities: "get to know our facilities",
         services: "Services",
         location: "Location",
-        differentials: "Differentials",
+        differentials: "Our differentials",
       },
       differentials: {
         breakfast: "Breakfast served in your room",

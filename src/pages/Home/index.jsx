@@ -97,11 +97,11 @@ function Home() {
           <h3 className="title">{i18n.t("titles.differentials")}</h3>
         </div>
         <div>
-          <ul className="grid grid-cols-2 grid-flow-row md:flex md:justify-center md:items-center gap-5">
+          <ul className="grid grid-cols-2 grid-flow-row md:flex md:justify-center gap-5">
             {differentials.map((differential, index) => (
-              <li className="flex flex-col text-center items-center gap-2" key={index}>
+              <li className={`flex flex-col text-center items-center gap-2 ${index === 1 ? "md:w-[80%] lg:w-[60%]" : "w-full"}`} key={index}>
                 <span className="text-[#1f2937]">{differential.icon && <differential.icon size={35} />}</span>
-                <p className="text-lg text-[#1f2937]">{differential.name}</p> 
+                <p className={`text-lg text-[#1f2937]`}>{differential.name}</p> 
               </li>
             ))}
           </ul>
