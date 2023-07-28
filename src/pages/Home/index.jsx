@@ -102,7 +102,7 @@ function Home() {
                 className="flex flex-col text-center items-center"
                 key={index}
               >
-                <span className="text-[#1f2937] mb-3 md:px-16 lg:px-20 xl:px-32">
+                <span className="text-[#1f2937] mb-3 md:px-16 xl:px-20 2xl:px-32">
                   {differential.icon && <differential.icon size={35} />}
                 </span>
                 <p className="text-lg text-[#1f2937]">{differential.name}</p>
