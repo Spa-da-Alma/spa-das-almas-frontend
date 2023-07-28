@@ -36,14 +36,14 @@ function Header() {
           </div>
         </div>
         <button
-          className="md:hidden z-20"
+          className="md:hidden z-30"
           onClick={() => setActiveMenu(!activeMenu)}
         >
           {activeMenu ? (
             <AiOutlineClose
               size={30}
               color="#0f172a"
-              className="fixed right-4 top-8"
+              className="fixed right-5 top-6"
             />
           ) : (
             <AiOutlineMenu size={30} color="#0f172a" />
@@ -67,7 +67,7 @@ function Header() {
               {languages.map((item, index) => (
                 <div
                   key={index}
-                  className="flex items-center gap-2 bg-white hover:bg-[#fafafa] px-4 py-6 z-10"
+                  className="flex items-center gap-2 bg-white hover:bg-[#fafafa] px-4 py-6 z-20"
                   onClick={() => handleSelectChange(item.language)}
                 >
                   <img
@@ -83,7 +83,7 @@ function Header() {
         </div>
         {activeMenu && (
           <div
-            className="fixed min-h-screen w-[60vw] right-0 top-0 shadow-xl pt-[30%] px-6 pb-6 z-10 bg-white md:hidden"
+            className="fixed min-h-screen w-[60vw] right-0 top-0 shadow-xl pt-[30%] px-6 pb-6 z-20 bg-white md:hidden"
             onBlur={() => setActiveMenu(false)}
           >
             <ul className="flex flex-col gap-4">

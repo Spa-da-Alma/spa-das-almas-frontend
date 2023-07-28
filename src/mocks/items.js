@@ -1,9 +1,8 @@
 import { AiFillHome } from "react-icons/ai";
 import { HiLocationMarker } from "react-icons/hi";
 import { MdCottage } from "react-icons/md";
-import { PiSunglassesFill } from "react-icons/pi";
-import { BsFillChatSquareHeartFill, BsEmojiSunglassesFill } from "react-icons/bs";
-import { SiFunimation } from "react-icons/si"
+import { BsFillChatSquareHeartFill } from "react-icons/bs";
+import { SiFunimation } from "react-icons/si";
 import { i18n } from "../translate/i18n";
 
 export default [
