@@ -99,9 +99,19 @@ function Home() {
         <div>
           <ul className="grid grid-cols-2 grid-flow-row md:flex md:justify-center gap-5">
             {differentials.map((differential, index) => (
-              <li className="flex flex-col text-center items-center" key={index}>
-                <span className="text-[#1f2937] mb-3 md:px-16 lg:px-20 xl:px-32">{differential.icon && <differential.icon size={35} />}</span>
-                <p className="text-lg text-[#1f2937]">{differential.name}</p>{differential.name_secundary && (<p className="text-lg text-[#1f2937]">{differential.name_secundary}</p>)}
+              <li
+                className="flex flex-col text-center items-center"
+                key={index}
+              >
+                <span className="text-[#1f2937] mb-3 md:px-16 lg:px-20 xl:px-32">
+                  {differential.icon && <differential.icon size={35} />}
+                </span>
+                <p className="text-lg text-[#1f2937]">{differential.name}</p>
+                {differential.name_secundary && (
+                  <p className="text-lg text-[#1f2937]">
+                    {differential.name_secundary}
+                  </p>
+                )}
               </li>
             ))}
           </ul>
