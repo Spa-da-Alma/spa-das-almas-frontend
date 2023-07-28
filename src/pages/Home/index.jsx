@@ -7,7 +7,6 @@ import { i18n } from "../../translate/i18n";
 import ReviewCard from "./components/ReviewCard";
 import { Link } from "react-router-dom";
 import { MdOutlineArrowForwardIos } from "react-icons/md";
-import items from "../../mocks/items";
 
 function Home() {
   const settings = {
@@ -37,14 +36,14 @@ function Home() {
   const callAction = [
     { name: i18n.t("items.cottage"), path: "/chales", image: "chales.jpg" },
     { name: i18n.t("items.leisure"), path: "/chales", image: "lazer.jpg" },
-    { name: i18n.t("items.services"), path: "/chales", image: "servicos.jpg" },
+    // { name: i18n.t("items.services"), path: "/chales", image: "servicos.jpg" },
   ];
 
   return (
     <>
       <div className="relative">
         <div
-          className="h-[60vh] max-w-screen z-0 bg-fixed bg-contain bg-no-repeat bg-center"
+          className="h-[40vh] lg:h-[60vh] z-0 bg-cover bg-no-repeat bg-center lg:bg-bottom"
           style={{
             backgroundImage: `url('/assets/reception.jpg')`,
           }}
@@ -65,7 +64,7 @@ function Home() {
           <h3 className="title">{i18n.t("titles.facilities")}</h3>
           <div className="flex flex-col gap-6 md:flex-row">
             {callAction.map((action, index) => (
-              <Link to={action.path} className="md:w-[33%]" key={index}>
+              <Link to={action.path} className="md:w-[50%]" key={index}>
                 <div
                   className="w-full h-[300px] md:h-[350px] lg:h-[400px] rounded-md"
                   style={{
@@ -97,7 +96,7 @@ function Home() {
           <h3 className="title">{i18n.t("titles.differentials")}</h3>
         </div>
         <div>
-          <ul className="grid grid-cols-2 grid-flow-row md:flex md:justify-center gap-5">
+          <ul className="grid grid-cols-2 md:flex md:justify-center gap-8 lg:gap-24">
             {differentials.map((differential, index) => (
               <li
                 className="flex flex-col text-center items-center"
