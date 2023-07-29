@@ -6,7 +6,6 @@ import { useEffect, useState } from "react";
 
 function Chales() {
   const { innerWidth: width } = window;
-  console.log(width);
   const [maxLenght, setMaxLenght] = useState(0);
   const [showMore, setShowMore] = useState(0);
 

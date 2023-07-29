@@ -24,7 +24,7 @@ export default [
   {
     name: i18n.t("items.leisure"),
     icon: SiFunimation,
-    path: "/",
+    path: "lazer",
   },
   {
     name: i18n.t("items.book"),
