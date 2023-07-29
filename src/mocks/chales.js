@@ -29,7 +29,19 @@ export default [
   },
   {
     name: i18n.t("cottage.mont_blanc.name"),
-    images: [],
+    images: [
+      "/assets/chales/mont_blanc/Placa_Chale.jpeg",
+      "/assets/chales/mont_blanc/Banheira MontBlanc.JPG",
+      "/assets/chales/mont_blanc/Banheiro.jpeg",
+      "/assets/chales/mont_blanc/Cafe da Manha.jpg",
+      "/assets/chales/mont_blanc/IMG_1226HB.jpg",
+      "/assets/chales/mont_blanc/Quarto_foto1.jpeg",
+      "/assets/chales/mont_blanc/Quarto_foto3.jpeg",
+      "/assets/chales/mont_blanc/Quarto_foto4.jpeg",
+      "/assets/chales/mont_blanc/Quarto_foto5.jpeg",
+      "/assets/chales/mont_blanc/Quarto_Panoramica1.jpeg",
+      "/assets/chales/mont_blanc/Quarto_Panoramica2.jpeg"
+    ],
     description: i18n.t("cottage.mont_blanc.description"),
   },
   {

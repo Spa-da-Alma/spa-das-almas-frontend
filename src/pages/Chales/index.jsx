@@ -5,7 +5,7 @@ import chales from "../../mocks/chales";
 import { useEffect, useState } from "react";
 
 function Chales() {
-  const { innerWidth:width } = window;
+  const { innerWidth: width } = window;
   console.log(width);
   const [maxLenght, setMaxLenght] = useState(0);
   const [showMore, setShowMore] = useState(0);
@@ -15,7 +15,7 @@ function Chales() {
   }, []);
 
   function defMaxLenght() {
-    setMaxLenght(180)
+    setMaxLenght(180);
     if (width >= 768) {
       setMaxLenght(300);
     } else if (width >= 1024) {
