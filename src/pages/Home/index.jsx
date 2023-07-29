@@ -7,37 +7,11 @@ import { i18n } from "../../translate/i18n";
 import ReviewCard from "./components/ReviewCard";
 import { Link } from "react-router-dom";
 import { MdOutlineArrowForwardIos } from "react-icons/md";
+import { useState } from "react";
+import { callAction, location_description, settings } from "../../utils/utils";
 
 function Home() {
-  const settings = {
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    infinite: true,
-    dots: true,
-    speed: 2000,
-    autoplay: true,
-    autoplaySpeed: 4000,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 2,
-        },
-      },
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 1,
-        },
-      },
-    ],
-  };
-
-  const callAction = [
-    { name: i18n.t("items.cottage"), path: "/chales", image: "chales.jpg" },
-    { name: i18n.t("items.leisure"), path: "/chales", image: "lazer.jpg" },
-    // { name: i18n.t("items.services"), path: "/chales", image: "servicos.jpg" },
-  ];
+  const [showMore, setShowMore] = useState(false);
 
   return (
     <>
@@ -115,7 +89,7 @@ function Home() {
             ))}
           </ul>
         </div>
-        <div className="p-4 md:px-8 lg:px-12">
+        <div className="p-4 md:px-8 lg:px-12" id="location">
           <h3 className="title">{i18n.t("titles.location")}</h3>
         </div>
         <iframe
@@ -123,6 +97,31 @@ function Home() {
           width="100%"
           height="450"
         ></iframe>
+        <div className="p-4 md:px-8 lg:px-12 text-justify text-lg text-gray-900">
+          <p className="inline">
+            {location_description.length > 400
+              ? showMore
+                ? location_description
+                : location_description.slice(0, 400)
+              : location_description}
+          </p>
+          {location_description.length > 400 &&
+            (showMore ? (
+              <span
+                className="inline ml-2 text-blue-600 cursor-pointer"
+                onClick={() => setShowMore(!showMore)}
+              >
+                Ver menos...
+              </span>
+            ) : (
+              <span
+                className="inline ml-2 text-blue-600 cursor-pointer"
+                onClick={() => setShowMore(!showMore)}
+              >
+                Ver mais...
+              </span>
+            ))}
+        </div>
       </div>
     </>
   );
