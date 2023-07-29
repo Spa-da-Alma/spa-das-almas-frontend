@@ -2,8 +2,27 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import chales from "../../mocks/chales";
+import { useEffect, useState } from "react";
 
 function Chales() {
+  const { innerWidth:width } = window;
+  console.log(width);
+  const [maxLenght, setMaxLenght] = useState(0);
+  const [showMore, setShowMore] = useState(0);
+
+  useEffect(() => {
+    defMaxLenght();
+  }, []);
+
+  function defMaxLenght() {
+    setMaxLenght(180)
+    if (width >= 768) {
+      setMaxLenght(300);
+    } else if (width >= 1024) {
+      setMaxLenght(700);
+    }
+  }
+
   return (
     <>
       <h3 className="title">Conheça nossos chalés</h3>
@@ -42,7 +61,21 @@ function Chales() {
               <h4 className="mb-4 text-lg font-semibold">
                 Descrição do chalé:
               </h4>
-              <p>{item.description}</p>
+              <div className="text-justify">
+                <p className="inline">
+                  {!showMore
+                    ? item.description.slice(0, maxLenght) + "..."
+                    : item.description}
+                </p>
+                {item.description.length >= maxLenght && (
+                  <button
+                    className="text-blue-900 font-light inline ml-2"
+                    onClick={() => setShowMore(!showMore)}
+                  >
+                    {showMore ? "Ver menos" : "Ver mais"}
+                  </button>
+                )}
+              </div>
             </div>
             <div className="h-[1px] w-full bg-slate-200"></div>
           </div>
