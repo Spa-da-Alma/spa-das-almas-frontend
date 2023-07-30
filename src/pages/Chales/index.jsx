@@ -1,4 +1,5 @@
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import chales from "../../mocks/chales";
@@ -25,7 +26,7 @@ function Chales() {
 
   useEffect(() => {
     defMaxLenght();
-  }, []);
+  });
 
   function defMaxLenght() {
     setMaxLenght(180);
@@ -61,7 +62,11 @@ function Chales() {
               slidesPerView={1.15}
               slidesPerGroup={1}
               centeredSlides={true}
-              pagination={{ clickable: true }}
+              pagination={{
+                type: "progressbar",
+              }}
+              navigation={true}
+              modules={[Pagination, Navigation]}
               breakpoints={{
                 768: {
                   slidesPerView: 2.5,
