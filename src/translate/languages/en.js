@@ -83,7 +83,7 @@ const messages = {
         },
         woodland: {
           name: "Woodland, fauna and flora",
-          description: '11000m2 of lots of green, birds, squirrels and a beautiful landscape of the mountain horizon. Waking up in the morning to the sound of birds and the wind between the trees "washes" the soul. Walking through the woods requires care given the slope, but certainly well rewarded when resting on our beautiful bench strategically positioned and handcrafted by our employees.'
+          description: 'There are 11000m2 of lots of green, birds, squirrels and a beautiful landscape of the mountain horizon. Waking up in the morning to the sound of birds and the wind between the trees "washes" the soul. Walking through the woods requires care given the slope, but certainly well rewarded when resting on our beautiful bench strategically positioned and handcrafted by our employees.'
         },
         fireplace: {
           name: "Outdoor campfire",

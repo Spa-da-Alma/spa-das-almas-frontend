@@ -16,7 +16,7 @@ fica no final desta rua! Estamos na Rua da Represa, 1477!`;
 
 export const callAction = [
   { name: i18n.t("items.cottage"), path: "/chales", image: "chales.jpg" },
-  { name: i18n.t("items.leisure"), path: "/chales", image: "lazer.jpg" },
+  { name: i18n.t("items.leisure"), path: "/lazer", image: "lazer.jpg" },
 ];
 
 export const settings = {

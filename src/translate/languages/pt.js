@@ -30,6 +30,9 @@ const messages = {
         location: "Localização",
         differentials: "Nossos diferenciais",
       },
+      subtitles: {
+        cottage: ""
+      },
       differentials: {
         breakfast: {
           primary: "Café da manhã",
@@ -77,7 +80,7 @@ const messages = {
         },
         pool: {
           name: "Piscina",
-          description: "não climatizada e deck para banho de sol de livre acesso a todos os nossos hóspedes. Parte da piscina é rasa (75cm) e a outra parte é funda (2m). Nossa piscina não é vigiada e crianças devem estar acompanhadas de adultos a todo o momento.",
+          description: "Não climatizada e deck para banho de sol de livre acesso a todos os nossos hóspedes. Parte da piscina é rasa (75cm) e a outra parte é funda (2m). Nossa piscina não é vigiada e crianças devem estar acompanhadas de adultos a todo o momento.",
         },
         sauna: {
           name: "Sauna seca e ducha sueca",
@@ -85,7 +88,7 @@ const messages = {
         },
         woodland: {
           name: "Bosque, fauna e flora",
-          description: "11000m2 de muito verde, pássaros, esquilos e uma linda paisagem do horizonte montanhoso. Acordar pela manhã ao som dos pássaros e do vento entre as árvores “lava” a alma. Caminhar pelo bosque requer cuidados dado a inclinação, mas certamente bem recompensado ao descansar em nosso lindo banco estrategicamente posicionado e construído artesanalmente por nossos funcionários."
+          description: "São 11000m2 de muito verde, pássaros, esquilos e uma linda paisagem do horizonte montanhoso. Acordar pela manhã ao som dos pássaros e do vento entre as árvores “lava” a alma. Caminhar pelo bosque requer cuidados dado a inclinação, mas certamente bem recompensado ao descansar em nosso lindo banco estrategicamente posicionado e construído artesanalmente por nossos funcionários."
         },
         fireplace: {
           name: "Fogueira ao ar livre",

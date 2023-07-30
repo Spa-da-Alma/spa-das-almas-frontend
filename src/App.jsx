@@ -5,7 +5,7 @@ import { BsWhatsapp } from "react-icons/bs";
 
 function App() {
   return (
-    <div className="relative">
+    <div className="flex flex-col min-h-screen relative">
       <Header />
       <a
         href="https://api.whatsapp.com/send?phone=5561981890316&text=Oi!%20Estou%20interessado%20em%20saber%20mais%20como%20funciona%20os%20chal%C3%A9s."

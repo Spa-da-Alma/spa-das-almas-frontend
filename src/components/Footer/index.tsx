@@ -6,7 +6,7 @@ import { i18n } from "../../translate/i18n";
 
 function Footer() {
   return (
-    <footer className="bg-gray-800 px-4 py-6 flex flex-col">
+    <footer className="bg-gray-800 px-4 py-6 flex flex-col mt-auto">
       <div className="flex items-center gap-4 text-white mb-8 md:mx-auto">
         <img
           src="/logotipo.png"

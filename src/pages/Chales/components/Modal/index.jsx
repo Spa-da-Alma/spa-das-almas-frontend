@@ -22,10 +22,10 @@ const Modal = ({
   return (
     <div className="modal-overlay fixed top-1/2 left-1/2 z-40 w-[80%] -translate-x-1/2 -translate-y-1/2">
       <button
-        className="absolute right-4 top-4 text-black z-30"
+        className="bg-black bg-opacity-50 rounded-full absolute right-4 top-4 text-white text-opacity-100 z-30 p-1"
         onClick={onClose}
       >
-        <AiOutlineClose size={40} />
+        <AiOutlineClose size={35} />
       </button>
       <Swiper
         modules={[Pagination, Navigation]}
@@ -47,6 +47,7 @@ const Modal = ({
           </SwiperSlide>
         ))}
       </Swiper>
+      <div className=""></div>
     </div>
   );
 };
