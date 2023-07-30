@@ -7,8 +7,8 @@ import { useEffect, useState } from "react";
 function Chales() {
   const { innerWidth: width } = window;
   console.log(width);
+
   const [maxLenght, setMaxLenght] = useState(0);
-  const [showMore, setShowMore] = useState(0);
 
   useEffect(() => {
     defMaxLenght();
@@ -23,9 +23,17 @@ function Chales() {
     }
   }
 
+  const [expandedChales, setExpandedChales] = useState({});
+
+  const toggleDescription = (index) => {
+    setExpandedChales((prevState) => ({
+      ...prevState,
+      [index]: !prevState[index],
+    }));
+  };
+
   return (
     <>
-      <h3 className="title">Conheça nossos chalés</h3>
       <div className="w-full">
         {chales.map((item, index) => (
           <div key={index}>
@@ -37,43 +45,47 @@ function Chales() {
             </div>
             <Swiper
               spaceBetween={10}
-              freeMode={true}
-              navigation={true}
-              className="cursor-pointer"
+              slidesPerView={1.15}
+              slidesPerGroup={1}
+              centeredSlides={true}
+              pagination={{ clickable: true }}
+              breakpoints={{
+                768: {
+                  slidesPerView: 2.5,
+                  centeredSlides: false,
+                },
+                1024: {
+                  slidesPerView: 3.5,
+                  centeredSlides: false,
+                },
+              }}
             >
               {item.images.map((item, index) => (
-                <SwiperSlide
-                  key={index}
-                  style={{
-                    flexShrink: 1,
-                  }}
-                >
-                  <div className="w-[300px]">
-                    <img
-                      src={item}
-                      className="h-[250px] md:h-[300px] lg:h-[350px] w-full object-cover"
-                    />
-                  </div>
+                <SwiperSlide key={index}>
+                  <img
+                    src={item}
+                    alt=""
+                    className="w-full h-[300px] lg:h-[350px] object-cover cursor-pointer"
+                  />
                 </SwiperSlide>
               ))}
             </Swiper>
-            <div className="p-4">
+            <div className="p-4 md:px-8 lg:px-12">
               <h4 className="mb-4 text-lg font-semibold">
                 Descrição do chalé:
               </h4>
               <div className="text-justify">
-                <p className="inline">
-                  {!showMore
-                    ? item.description.slice(0, maxLenght) + "..."
-                    : item.description}
-                </p>
-                {item.description.length >= maxLenght && (
-                  <button
-                    className="text-blue-900 font-light inline ml-2"
-                    onClick={() => setShowMore(!showMore)}
-                  >
-                    {showMore ? "Ver menos" : "Ver mais"}
-                  </button>
+                {item.description.length > maxLenght ? (
+                  <p>
+                    {expandedChales[index]
+                      ? item.description
+                      : `${item.description.slice(0, maxLenght)}...`}
+                    <button onClick={() => toggleDescription(index)}>
+                      {expandedChales[index] ? "Ver menos" : "Ver mais"}
+                    </button>
+                  </p>
+                ) : (
+                  <p>{item.description}</p>
                 )}
               </div>
             </div>

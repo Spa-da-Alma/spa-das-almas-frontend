@@ -40,7 +40,7 @@ export default [
       "/assets/chales/mont_blanc/Quarto_foto4.jpeg",
       "/assets/chales/mont_blanc/Quarto_foto5.jpeg",
       "/assets/chales/mont_blanc/Quarto_Panoramica1.jpeg",
-      "/assets/chales/mont_blanc/Quarto_Panoramica2.jpeg"
+      "/assets/chales/mont_blanc/Quarto_Panoramica2.jpeg",
     ],
     description: i18n.t("cottage.mont_blanc.description"),
   },
