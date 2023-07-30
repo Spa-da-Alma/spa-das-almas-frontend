@@ -67,7 +67,29 @@ const messages = {
           name: "charmey",
           description: "One suite with a double whirlpool in the bedroom, bathroom, and a bay window with a view of the sunset!",
         }
-      }
+      },
+      leisure: {
+        ofuro: {
+          name : "Ofuro",
+          description: "With hydro and private deck in outdoor area. Our hot tub holds up to four people, is located in a high place with fantastic views of the sunset and has a private deck. The 1:30h session can be scheduled by guests and has an additional cost due to the operating cost (water change, sanitization, heating, etc.). Both the hot tub and its private deck are isolated and dedicated to the guest who books it.",
+        },
+        pool: {
+          name: "Pool",
+          description: "The pool is not air-conditioned and the sunbathing deck is freely accessible to all our guests. Part of the pool is shallow (75cm) and the other part is deep (2m). Our pool is not guarded and children must be accompanied by adults at all times.",
+        },
+        sauna: {
+          name: "Dry sauna and Swedish shower",
+          description: "Our dry sauna is next to the pool and reception. Interested guests can schedule the time they wish to use the sauna so that we can prepare it accordingly. The use of the sauna is free, at no extra cost to our guests.",
+        },
+        woodland: {
+          name: "Woodland, fauna and flora",
+          description: '11000m2 of lots of green, birds, squirrels and a beautiful landscape of the mountain horizon. Waking up in the morning to the sound of birds and the wind between the trees "washes" the soul. Walking through the woods requires care given the slope, but certainly well rewarded when resting on our beautiful bench strategically positioned and handcrafted by our employees.'
+        },
+        fireplace: {
+          name: "Outdoor campfire",
+          description: "What do you think of starting the evening under the starry sky around the fireplace socializing with those we love and tasting a good wine? Our outdoor fireplace is close to the Monviso chalet and the swimming pool and can be used by all guests."
+        },
+      },
     },
   },
 };
