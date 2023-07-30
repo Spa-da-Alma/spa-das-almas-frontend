@@ -69,7 +69,29 @@ const messages = {
           name: "charmey",
           description: "Uma Suíte com  hidromassagem dupla no quarto, banheiro e baywindow com vista para o pôr-do-sol!",
         }
-      }
+      },
+      leisure: {
+        ofuro: {
+          name : "Ofurô",
+          description: "Com hidro e deck privativo em área externa. Nosso ofurô comporta até quarto pessoas, fica situado em local alto com fantástica vista para o pôr-do-sol e possui um deck privativo. A sessão de 1:30h pode ser agendada pelos hóspedes e possui custo adicional devido ao custo operacional (troca da água, higienização, aquecimento etc). Tanto o ofurô quanto seu deck privativo ficam isolados e dedicados ao hóspede que o reserva.",
+        },
+        pool: {
+          name: "Piscina",
+          description: "não climatizada e deck para banho de sol de livre acesso a todos os nossos hóspedes. Parte da piscina é rasa (75cm) e a outra parte é funda (2m). Nossa piscina não é vigiada e crianças devem estar acompanhadas de adultos a todo o momento.",
+        },
+        sauna: {
+          name: "Sauna seca e ducha sueca",
+          description: "Nossa sauna seca fica próxima à piscina e recepção. Hóspedes interessados podem agendar o horário em que desejam utilizar a sauna de forma a prepararmos a mesma de acordo. A utilização da sauna é livre, sem custo extra para nossos hóspedes.",
+        },
+        woodland: {
+          name: "Bosque, fauna e flora",
+          description: "11000m2 de muito verde, pássaros, esquilos e uma linda paisagem do horizonte montanhoso. Acordar pela manhã ao som dos pássaros e do vento entre as árvores “lava” a alma. Caminhar pelo bosque requer cuidados dado a inclinação, mas certamente bem recompensado ao descansar em nosso lindo banco estrategicamente posicionado e construído artesanalmente por nossos funcionários."
+        },
+        fireplace: {
+          name: "Fogueira ao ar livre",
+          description: "O que acha de iniciar a noite sob o céu estrelado ao redor da lareira confraternizando com quem gostamos e degustando um bom vinho? Nossa lareira externa fica próxima do chalé Monviso e da piscina e pode ser utilizada por todos os hóspedes."
+        },
+      },
     },
   },
 };
