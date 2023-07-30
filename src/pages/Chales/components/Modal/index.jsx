@@ -1,6 +1,8 @@
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
+import "swiper/css/pagination";
 import chales from "../../../../mocks/chales";
 import { AiOutlineClose } from "react-icons/ai";
 
@@ -26,13 +28,14 @@ const Modal = ({
         <AiOutlineClose size={40} />
       </button>
       <Swiper
+        modules={[Pagination, Navigation]}
         spaceBetween={10}
         slidesPerView={1}
         slidesPerGroup={1}
         navigation={true}
+        pagination={{ clickable: true }}
         initialSlide={selectedImageIndex}
         centeredSlides={true}
-        pagination={{ clickable: true }}
       >
         {cottage?.images.map((image, index) => (
           <SwiperSlide key={index}>

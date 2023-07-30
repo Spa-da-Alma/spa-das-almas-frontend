@@ -2,6 +2,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
+import "swiper/css/pagination";
 import chales from "../../mocks/chales";
 import { useEffect, useState } from "react";
 import Modal from "./components/Modal";
@@ -58,15 +59,16 @@ function Chales() {
               <h3 className="text-2xl uppercase font-semibold">{item.name}</h3>
             </div>
             <Swiper
+              modules={[Pagination, Navigation]}
               spaceBetween={10}
               slidesPerView={1.15}
               slidesPerGroup={1}
               centeredSlides={true}
               pagination={{
+                clickable: true,
                 type: "progressbar",
               }}
               navigation={true}
-              modules={[Pagination, Navigation]}
               breakpoints={{
                 768: {
                   slidesPerView: 2.5,
