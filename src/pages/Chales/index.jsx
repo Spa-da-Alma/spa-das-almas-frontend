@@ -7,17 +7,18 @@ import Modal from "./components/Modal";
 
 function Chales() {
   const { innerWidth: width } = window;
-
+  const [maxLenght, setMaxLenght] = useState(0);
   const [selectedImageCottage, setSelectedImageCottage] = useState(null);
   const [selectedImageIndex, setSelectedImageIndex] = useState(null);
-  const [maxLenght, setMaxLenght] = useState(0);
 
   const openModal = (cottage, index) => {
+    document.body.classList.add("modal-open");
     setSelectedImageCottage(cottage);
     setSelectedImageIndex(index);
   };
 
   const closeModal = () => {
+    document.body.classList.remove("modal-open");
     setSelectedImageCottage(null);
     setSelectedImageIndex(null);
   };
@@ -46,7 +47,7 @@ function Chales() {
 
   return (
     <div className="relative">
-      <div className={`${selectedImageCottage && "opacity-60"} w-full`}>
+      <div className={`${selectedImageCottage && "opacity-20"} w-full`}>
         {chales.map((item, index) => (
           <div key={index}>
             <div className="text-center my-8">
