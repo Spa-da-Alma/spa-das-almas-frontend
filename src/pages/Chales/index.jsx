@@ -3,12 +3,24 @@ import "swiper/css";
 import "swiper/css/navigation";
 import chales from "../../mocks/chales";
 import { useEffect, useState } from "react";
+import Modal from "./components/Modal";
 
 function Chales() {
   const { innerWidth: width } = window;
-  console.log(width);
 
+  const [selectedImageCottage, setSelectedImageCottage] = useState(null);
+  const [selectedImageIndex, setSelectedImageIndex] = useState(null);
   const [maxLenght, setMaxLenght] = useState(0);
+
+  const openModal = (cottage, index) => {
+    setSelectedImageCottage(cottage);
+    setSelectedImageIndex(index);
+  };
+
+  const closeModal = () => {
+    setSelectedImageCottage(null);
+    setSelectedImageIndex(null);
+  };
 
   useEffect(() => {
     defMaxLenght();
@@ -33,8 +45,8 @@ function Chales() {
   };
 
   return (
-    <>
-      <div className="w-full">
+    <div className="relative">
+      <div className={`${selectedImageCottage && "opacity-60"} w-full`}>
         {chales.map((item, index) => (
           <div key={index}>
             <div className="text-center my-8">
@@ -60,12 +72,21 @@ function Chales() {
                 },
               }}
             >
-              {item.images.map((item, index) => (
+              {item.images.map((image, index) => (
                 <SwiperSlide key={index}>
                   <img
-                    src={item}
+                    src={image}
                     alt=""
                     className="w-full h-[300px] lg:h-[350px] object-cover cursor-pointer"
+                    onClick={() => {
+                      if (selectedImageCottage) {
+                        if (selectedImageCottage === item.name) {
+                          setSelectedImageIndex(index);
+                        }
+                      } else {
+                        openModal(item.name, index);
+                      }
+                    }}
                   />
                 </SwiperSlide>
               ))}
@@ -93,7 +114,13 @@ function Chales() {
           </div>
         ))}
       </div>
-    </>
+      <Modal
+        isOpen={selectedImageCottage !== null}
+        onClose={closeModal}
+        selectedImageCottage={selectedImageCottage}
+        selectedImageIndex={selectedImageIndex}
+      />
+    </div>
   );
 }
 

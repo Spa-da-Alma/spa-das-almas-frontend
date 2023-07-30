@@ -9,6 +9,10 @@
   }
 }
 
+.modal-open {
+  @apply overflow-hidden;
+}
+
 .title {
   @apply text-xl md:text-2xl text-center uppercase my-6 font-medium py-8 border-y-2 border-y-gray-200;
 }
