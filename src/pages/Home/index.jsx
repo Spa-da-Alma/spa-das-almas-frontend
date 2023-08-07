@@ -8,7 +8,7 @@ import ReviewCard from "./components/ReviewCard";
 import { Link } from "react-router-dom";
 import { MdOutlineArrowForwardIos } from "react-icons/md";
 import { useState } from "react";
-import { callAction, location_description, settings } from "../../utils/utils";
+import { callAction, settings } from "../../utils/utils";
 
 function Home() {
   const [showMore, setShowMore] = useState(false);

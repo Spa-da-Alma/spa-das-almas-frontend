@@ -57,7 +57,7 @@ function Footer() {
             <li>
               <a className="flex gap-2">
                 <HiMail size={24} color="white" />
-                <span className="text-gray-400">contato@spadasalmas.com</span>
+                <span className="text-gray-400">hospedag@hospedagemspadaalma.com.br</span>
               </a>
             </li>
             <li>
