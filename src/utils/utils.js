@@ -12,7 +12,7 @@ estrada, até a praça do Bradesco. Você pode seguir em frente,
 contornando a curva em subida á direita no restaurante Chalana na Rua
 da Represa e seguindo em frente até uma bifurcação onde você deverá
 subir a esquerda até chegar na pousada Hospedagem Spa da Alma, que
-fica no final desta rua! Estamos na Rua da Represa, 1477!`;
+fica no final desta rua! Estamos na Rua da Represa, 1477. `;
 
 export const callAction = [
   { name: i18n.t("items.cottage"), path: "/chales", image: "chales.jpg" },

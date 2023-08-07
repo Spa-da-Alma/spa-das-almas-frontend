@@ -25,8 +25,15 @@ const messages = {
         reviews: "What our guests comment",
         facilities: "get to know our facilities",
         services: "Services",
-        location: "Location",
+        location: {
+          name: "Location",
+          description: "Leaving São Paulo, take the Fernão Dias highway (BR-381) towards Belo Horizonte. After the SP/MG border, drive for another 30 km through the towns of Extrema and Itapeva and enter Camanducaia to access the 29 km Camanducaia/M.Verde road up the mountain. At about Km 13 there will be a bridge. After this bridge, take the second right and follow it for another 17 km until you reach the city gate. After reaching the gate, follow Monte Verde Avenue, which is the continuation of the road, until Bradesco Square. You can go straight ahead, going around the curve on the right at the Chalana restaurant on Rua da Represa and going straight ahead until a fork where you should go up on the left until you reach the Spa da Alma guesthouse, which is at the end of this street! We are at Rua da Represa, 1477. "
+        },
         differentials: "Our differentials",
+      },
+      paragraphs: {
+        see_more: "See more",
+        see_less: "See less",
       },
       differentials: {
         breakfast: {
@@ -43,29 +50,31 @@ const messages = {
         contact_us: "Contact us",
       },
       cottage: {
+        name: "Chalet",
+        description_title: "Description of the chalet",
         martigny: {
           name: "martigny",
-          description: "Rustic and artisanal decoration, all glassed with a privileged view of the mountains and sunset. Ambient heating system and air conditioning. Kingsize bed with 1000-thread count linens and plush towels. Fireplace area with a large sofa bed and Smart 4K TV with home theater. Mini kitchen equipped with a cooktop, sink, minibar, microwave, basic utensils, fondue set, and Nespresso coffee maker. Bathtub with hydro massage for up to 3 people and a skylight. The bathroom features heated floors, a heated towel rack, double sinks, and dual showers. The space includes a desk and office chair. Fiber optic internet."
+          description: "Rustic and artisanal decoration, all glassed with a privileged view of the mountains and sunset. Ambient heating system and air conditioning. Kingsize bed with 1000-thread count linens and plush towels. Fireplace area with a large sofa bed and Smart 4K TV with home theater. Mini kitchen equipped with a cooktop, sink, minibar, microwave, basic utensils, fondue set, and Nespresso coffee maker. Bathtub with hydro massage for up to 3 people and a skylight. The bathroom features heated floors, a heated towel rack, double sinks, and dual showers. The space includes a desk and office chair. Fiber optic internet. "
         },
         chamonix: {
           name: "chamonix",
-          description: "One suite or two bedrooms with a dining room, fireplace, and American kitchen. Bathroom with a hot tub, powder room, and a view of the araucaria and pine forest!",
+          description: "One suite or two bedrooms with a dining room, fireplace, and American kitchen. Bathroom with a hot tub, powder room, and a view of the araucaria and pine forest. ",
         },
         mont_blanc: {
           name: "mont blanc",
-          description: "One suite with a double whirlpool in the bedroom, bathroom, and a private panoramic deck overlooking the forest!",
+          description: "One suite with a double whirlpool in the bedroom, bathroom, and a private panoramic deck overlooking the forest. ",
         },
         monviso: {
           name: "monviso",
-          description: "Cottage with five bedrooms, accommodating up to twelve people, facing the pool, dining room, living room with fireplace, and game room!",
+          description: "Cottage with five bedrooms, accommodating up to twelve people, facing the pool, dining room, living room with fireplace, and game room. ",
         },
         cheverny: {
           name: "cheverny",
-          description: "One suite with a double whirlpool in the bedroom, bathroom, and a bay window with a view of the sunset!",
+          description: "One suite with a double whirlpool in the bedroom, bathroom, and a bay window with a view of the sunset. ",
         },
         charmey: {
           name: "charmey",
-          description: "One suite with a double whirlpool in the bedroom, bathroom, and a bay window with a view of the sunset!",
+          description: "One suite with a double whirlpool in the bedroom, bathroom, and a bay window with a view of the sunset. ",
         }
       },
       leisure: {

@@ -3,7 +3,23 @@ import { i18n } from "../translate/i18n";
 export default [
   {
     name: i18n.t("cottage.martigny.name"),
-    images: [],
+    images: [
+      "/assets/chales/chamonix/IMG_0330.JPG",
+      "/assets/chales/chamonix/Cozinha Chamonix.JPG",
+      "/assets/chales/chamonix/Fachada Chamonix.JPG",
+      "/assets/chales/chamonix/IMG_0123.JPG",
+      "/assets/chales/chamonix/IMG_0124.JPG",
+      "/assets/chales/chamonix/IMG_0280.JPG",
+      "/assets/chales/chamonix/IMG_0345.JPG",
+      "/assets/chales/chamonix/IMG_0416.JPG",
+      "/assets/chales/chamonix/IMG_0425.JPG",
+      "/assets/chales/chamonix/IMG_0437.JPG",
+      "/assets/chales/chamonix/Lareira Chamonix.JPG",
+      "/assets/chales/chamonix/Ofuro Chamonix.JPG",
+      "/assets/chales/chamonix/Quarto 1 Chamonix.JPG",
+      "/assets/chales/chamonix/Quarto 2 Chamonix.JPG",
+      "/assets/chales/chamonix/Sala Chamonix.JPG",
+    ],
     description: i18n.t("cottage.martigny.description"),
   },
   {

@@ -90,7 +90,7 @@ function Home() {
           </ul>
         </div>
         <div className="p-4 md:px-8 lg:px-12" id="location">
-          <h3 className="title">{i18n.t("titles.location")}</h3>
+          <h3 className="title">{i18n.t("titles.location.name")}</h3>
         </div>
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d5051.144008075224!2d-46.021924555312545!3d-22.863270661739612!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cc104a3a67a26b%3A0x34aa88739c7f0e92!2sHospedagem%20Spa%20da%20Alma!5e0!3m2!1sen!2sbr!4v1689790413916!5m2!1sen!2sbr"
@@ -99,26 +99,26 @@ function Home() {
         ></iframe>
         <div className="p-4 md:px-8 lg:px-12 text-justify text-lg text-gray-900">
           <p className="inline">
-            {location_description.length > 400
+            {i18n.t("titles.location.description").length > 400
               ? showMore
-                ? location_description
-                : location_description.slice(0, 400)
-              : location_description}
+                ? i18n.t("titles.location.description")
+                : `${i18n.t("titles.location.description").slice(0, 400)}...`
+              : i18n.t("titles.location.description")}
           </p>
-          {location_description.length > 400 &&
+          {i18n.t("titles.location.description").length > 400 &&
             (showMore ? (
               <span
                 className="inline ml-2 text-blue-600 cursor-pointer"
                 onClick={() => setShowMore(!showMore)}
               >
-                Ver menos...
+                {i18n.t("paragraphs.see_less")}
               </span>
             ) : (
               <span
                 className="inline ml-2 text-blue-600 cursor-pointer"
                 onClick={() => setShowMore(!showMore)}
               >
-                Ver mais...
+                {i18n.t("paragraphs.see_more")}
               </span>
             ))}
         </div>

@@ -6,6 +6,7 @@ import "swiper/css/pagination";
 import chales from "../../mocks/chales";
 import { useEffect, useState } from "react";
 import Modal from "./components/Modal";
+import { i18n } from "../../translate/i18n";
 
 function Chales() {
   const { innerWidth: width } = window;
@@ -54,7 +55,7 @@ function Chales() {
           <div key={index}>
             <div className="text-center my-8">
               <span className="uppercase text-md tracking-[0.25rem]">
-                Chalé
+                {i18n.t("cottage.name")}
               </span>
               <h3 className="text-2xl uppercase font-semibold">{item.name}</h3>
             </div>
@@ -101,16 +102,21 @@ function Chales() {
             </Swiper>
             <div className="p-4 md:px-8 lg:px-12">
               <h4 className="mb-4 text-lg font-semibold">
-                Descrição do chalé:
+                {i18n.t("cottage.description_title")}:
               </h4>
               <div className="text-justify">
                 {item.description.length > maxLenght ? (
                   <p>
                     {expandedChales[index]
                       ? item.description
-                      : `${item.description.slice(0, maxLenght)}...`}
-                    <button onClick={() => toggleDescription(index)}>
-                      {expandedChales[index] ? "Ver menos" : "Ver mais"}
+                      : `${item.description.slice(0, maxLenght)}... `}
+                    <button
+                      className="text-blue-600"
+                      onClick={() => toggleDescription(index)}
+                    >
+                      {expandedChales[index]
+                        ? i18n.t("paragraphs.see_less")
+                        : i18n.t("paragraphs.see_more")}
                     </button>
                   </p>
                 ) : (
