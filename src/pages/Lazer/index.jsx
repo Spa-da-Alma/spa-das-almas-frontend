@@ -1,5 +1,5 @@
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination } from "swiper/modules";
+import { Navigation, Pagination, EffectCoverflow } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -10,29 +10,28 @@ function Lazer() {
     <>
       <div className="w-full">
         <Swiper
-          modules={[Pagination, Navigation]}
-          spaceBetween={10}
-          slidesPerView={2}
-          slidesPerGroup={1}
-          centeredSlides={true}
-          pagination={{
-            clickable: true,
-            type: "progressbar",
-          }}
-          navigation={true}
+          effect={"coverflow"}
           grabCursor={true}
-          effect={'coverflow'}
+          centeredSlides={true}
+          slidesPerView={"auto"}
           coverflowEffect={{
             rotate: 0,
-            stretch: 80,
-            depth: 200,
-            modifier: 1,
-            slideShadows: true,
+            stretch: 0,
+            depth: 100,
+            modifier: 2.5,
           }}
+          pagination={{ clickable: true }}
+          // pagination={{ el: ".swiper-pagination", clickable: true }}
+          navigation={{
+            // nextEl: ".swiper-button-next",
+            // prevEl: ".swiper-button-prev",
+            clickable: true,
+          }}
+          modules={[EffectCoverflow, Pagination, Navigation]}
         >
           {lazer.map((item, index) => (
             <SwiperSlide key={index}>
-              <div className="flex justify-center items-center h-[61px] my-8">
+              <div className="flex justify-center items-center h-[61px] my-8 p-12">
                 <h1 className="text-2xl uppercase font-semibold text-center">
                   {item.name}
                 </h1>
