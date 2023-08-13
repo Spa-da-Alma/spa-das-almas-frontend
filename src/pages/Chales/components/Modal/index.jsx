@@ -13,7 +13,6 @@ const Modal = ({
   selectedImageIndex,
 }) => {
   const cottage = chales.find((item) => item.name === selectedImageCottage);
-  console.log(cottage);
 
   if (!isOpen) {
     return null;

@@ -111,15 +111,7 @@ function Header() {
               key={index}
               className=" text-white uppercase bg-transparent hover:bg-gray-900 transition-all w-[180px] cursor-pointer"
             >
-              {index === 2 ? (
-                <a
-                  href="#location"
-                  className="text-lg flex flex-col items-center justify-center gap-2 text-center p-4"
-                >
-                  <item.icon size={20} />
-                  {item.name}
-                </a>
-              ) : (
+              {
                 <Link
                   to={`/${item.path}`}
                   className="text-lg flex flex-col items-center justify-center gap-2 text-center p-4"
@@ -127,7 +119,7 @@ function Header() {
                   <item.icon size={20} />
                   {item.name}
                 </Link>
-              )}
+              }
             </li>
           ))}
         </ul>
