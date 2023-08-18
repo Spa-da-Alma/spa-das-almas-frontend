@@ -113,7 +113,8 @@ function Header() {
             >
               {
                 <Link
-                  to={`/${item.path}`}
+                  to={`${item.path}`}
+                  target={`${item.target}`}
                   className="text-lg flex flex-col items-center justify-center gap-2 text-center p-4"
                 >
                   <item.icon size={20} />
