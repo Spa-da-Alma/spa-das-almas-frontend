@@ -13,12 +13,13 @@ function Lazer() {
           effect={"coverflow"}
           grabCursor={true}
           centeredSlides={true}
-          slidesPerView={"auto"}
+          slidesPerView={2}
           coverflowEffect={{
             rotate: 0,
             stretch: 0,
             depth: 100,
-            modifier: 2.5,
+            modifier: 10,
+            slideShadows: false,
           }}
           pagination={{ clickable: true }}
           // pagination={{ el: ".swiper-pagination", clickable: true }}
@@ -36,12 +37,18 @@ function Lazer() {
                   {item.name}
                 </h1>
               </div>
-              <img
-                className="object-cover h-[300px] w-full object-bottom"
-                src={item.image}
-                alt=""
-              />
-              <p className="text-justify px-2 mt-2 mb-20">{item.description}</p>
+              <div className="bg-slate-50 text-justify shadow-md">
+                <img
+                  className="object-cover h-[300px] w-full object-bottom"
+                  src={item.image}
+                  alt=""
+                />
+                <div className=" p-4 ">
+                  <p className="text-justify px-2 mt-2 mb-20 text-gray-900">
+                    {item.description}
+                  </p>
+                </div>
+              </div>
             </SwiperSlide>
           ))}
         </Swiper>
