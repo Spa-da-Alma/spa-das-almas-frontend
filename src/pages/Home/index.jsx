@@ -7,12 +7,10 @@ import { i18n } from "../../translate/i18n";
 import ReviewCard from "./components/ReviewCard";
 import { Link } from "react-router-dom";
 import { MdOutlineArrowForwardIos } from "react-icons/md";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { callAction, settings } from "../../utils/utils";
 
 function Home() {
-  const [showMore, setShowMore] = useState(false);
-
   return (
     <>
       <div className="relative">
@@ -21,7 +19,21 @@ function Home() {
           style={{
             backgroundImage: `url('/assets/reception.jpg')`,
           }}
-        ></div>
+        >
+          <form className="hidden lg:flex w-full h-full justify-center items-center gap-2">
+            <input type="text" />
+            <input
+              className="bg-white rounded shadow-md text-black text-center"
+              type="date"
+              // use state set valor onChange
+            />
+            <input
+              className="bg-white rounded shadow-md text-black text-center"
+              type="date"
+              // use state set valor onChange
+            />
+          </form>
+        </div>
       </div>
       <div className="">
         <div className="p-4 md:px-8 lg:px-12">
