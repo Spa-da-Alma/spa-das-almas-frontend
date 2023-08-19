@@ -44,6 +44,7 @@ const messages = {
           ten: "10 Childrens",
           eleven: "11 Childrens",
         },
+        submit: "Consult prices",
       },
       review: {
         from: "review taken from",

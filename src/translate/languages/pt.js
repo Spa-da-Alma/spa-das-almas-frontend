@@ -46,6 +46,7 @@ const messages = {
           ten: "10 Crianças",
           eleven: "11 Crianças",
         },
+        submit: "Consultar valores",
       },
       review: {
         from: "review retirado do",

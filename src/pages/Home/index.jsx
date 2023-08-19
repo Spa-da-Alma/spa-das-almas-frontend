@@ -75,6 +75,7 @@ function Home() {
                 <input
                   className="bg-white rounded shadow-md text-black text-center"
                   type="date"
+                  min={actual_date}
                   value={checkOut}
                   onChange={(e) => setCheckOut(e.target.value)}
                 />
@@ -130,7 +131,7 @@ function Home() {
               <input
                 type="submit"
                 className="bg-white rounded-lg shadow-md m-3 px-3 text-[#0f172a] font-bold text-center hover:outline hover:cursor-pointer"
-                value="Consultar valores"
+                value={i18n.t("book.submit")}
               />
             </div>
           </form>
