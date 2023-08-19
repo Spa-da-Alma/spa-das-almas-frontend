@@ -89,7 +89,7 @@ function Header() {
             <ul className="flex flex-col gap-4">
               {items.map((item, index) => (
                 <Link
-                  to={`/${item.path}`}
+                  to={`${item.path}`}
                   className="text-xl text-gray-950"
                   key={index}
                   onClick={() => setActiveMenu(false)}
