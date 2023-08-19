@@ -7,10 +7,36 @@ import { i18n } from "../../translate/i18n";
 import ReviewCard from "./components/ReviewCard";
 import { Link } from "react-router-dom";
 import { MdOutlineArrowForwardIos } from "react-icons/md";
-import { useRef, useState } from "react";
+import { useState } from "react";
 import { callAction, settings } from "../../utils/utils";
 
 function Home() {
+  const [checkIn, setCheckIn] = useState("");
+  const [checkOut, setCheckOut] = useState("");
+  const [adults, setAdults] = useState(2);
+  const [children, setChildren] = useState(0);
+  const actual_date = new Date().toISOString().split("T")[0];
+
+  const handleFormSubmit = (e) => {
+    e.preventDefault();
+
+    const companyId = "5f28e3fbab41d429a42ac74c";
+    const queryParams = new URLSearchParams({
+      companyId,
+      adults,
+      children,
+      checkin: checkIn,
+      checkout: checkOut,
+    });
+
+    const bookingLink = `https://hbook.hsystem.com.br/booking?${queryParams.toString()}`;
+
+    const newWindow = window.open(bookingLink, "_blank");
+    if (newWindow) {
+      newWindow.focus();
+    }
+  };
+
   return (
     <>
       <div className="relative">
@@ -20,18 +46,93 @@ function Home() {
             backgroundImage: `url('/assets/reception.jpg')`,
           }}
         >
-          <form className="hidden lg:flex w-full h-full justify-center items-center gap-2">
-            <input type="text" />
-            <input
-              className="bg-white rounded shadow-md text-black text-center"
-              type="date"
-              // use state set valor onChange
-            />
-            <input
-              className="bg-white rounded shadow-md text-black text-center"
-              type="date"
-              // use state set valor onChange
-            />
+          <form
+            className="hidden lg:flex w-full h-full justify-center items-center gap-2"
+            onSubmit={handleFormSubmit}
+          >
+            <div
+              className="flex flex-row justify-center bg-white bg-opacity-[97%] p-2 rounded-md gap-10 flex-shrink-0"
+              style={{
+                backdropFilter: "blur(10px)",
+              }}
+            >
+              <div className="flex flex-col justify-center mb-4 px-6">
+                <h2 className="text-[#0f172a] font-semibold">
+                  {i18n.t("book.check_in")}
+                </h2>
+                <input
+                  className="bg-white rounded shadow-md text-black text-center"
+                  type="date"
+                  min={actual_date}
+                  value={checkIn}
+                  onChange={(e) => setCheckIn(e.target.value)}
+                />
+              </div>
+              <div className="flex flex-col justify-center mb-4">
+                <h2 className="text-[#0f172a] font-semibold">
+                  {i18n.t("book.check_out")}
+                </h2>
+                <input
+                  className="bg-white rounded shadow-md text-black text-center"
+                  type="date"
+                  value={checkOut}
+                  onChange={(e) => setCheckOut(e.target.value)}
+                />
+              </div>
+              <div className="flex flex-col justify-center mb-4">
+                <h2 className="text-[#0f172a] font-semibold">
+                  {i18n.t("book.adults.name")}
+                </h2>
+                <select
+                  name=""
+                  id=""
+                  className="bg-white rounded shadow-md text-black text-center"
+                  defaultValue={adults}
+                  onChange={(e) => setAdults(e.target.value)}
+                >
+                  <option value="1">{i18n.t("book.adults.one")}</option>
+                  <option value="2">{i18n.t("book.adults.two")}</option>
+                  <option value="3">{i18n.t("book.adults.three")}</option>
+                  <option value="4">{i18n.t("book.adults.for")}</option>
+                  <option value="5">{i18n.t("book.adults.five")}</option>
+                  <option value="6">{i18n.t("book.adults.six")}</option>
+                  <option value="6">{i18n.t("book.adults.seven")}</option>
+                  <option value="6">{i18n.t("book.adults.eight")}</option>
+                  <option value="6">{i18n.t("book.adults.nine")}</option>
+                  <option value="6">{i18n.t("book.adults.ten")}</option>
+                </select>
+              </div>
+              <div className="flex flex-col justify-center mb-4">
+                <h2 className="text-[#0f172a] font-semibold">
+                  {i18n.t("book.childrens.name")}
+                </h2>
+                <select
+                  name=""
+                  id=""
+                  className="bg-white rounded shadow-md text-black text-center"
+                  defaultValue={children}
+                  onChange={(e) => setChildren(e.target.value)}
+                >
+                  <option value="0">{i18n.t("book.childrens.zero")}</option>
+                  <option value="1">{i18n.t("book.childrens.one")}</option>
+                  <option value="2">{i18n.t("book.childrens.two")}</option>
+                  <option value="3">{i18n.t("book.childrens.three")}</option>
+                  <option value="4">{i18n.t("book.childrens.for")}</option>
+                  <option value="5">{i18n.t("book.childrens.five")}</option>
+                  <option value="6">{i18n.t("book.childrens.six")}</option>
+                  <option value="6">{i18n.t("book.childrens.seven")}</option>
+                  <option value="6">{i18n.t("book.childrens.eight")}</option>
+                  <option value="6">{i18n.t("book.childrens.nine")}</option>
+                  <option value="6">{i18n.t("book.childrens.ten")}</option>
+                  <option value="6">{i18n.t("book.childrens.eleven")}</option>
+                </select>
+              </div>
+              <input
+                type="submit"
+                className="bg-white rounded-lg shadow-md m-3 px-3 text-[#0f172a] font-bold text-center hover:outline hover:cursor-pointer"
+                value="Consultar valores"
+              />
+            </div>
           </form>
         </div>
       </div>
