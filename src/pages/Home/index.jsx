@@ -41,96 +41,102 @@ function Home() {
     <>
       <div className="relative">
         <div
-          className="h-[40vh] lg:h-[60vh] z-0 bg-cover bg-no-repeat bg-center lg:bg-bottom"
+          className="h-[60vh] z-0 bg-cover bg-no-repeat bg-center lg:bg-bottom"
           style={{
             backgroundImage: `url('/assets/reception.jpg')`,
           }}
         >
           <form
-            className="hidden lg:flex w-full h-full justify-center items-center gap-2"
+            className="flex w-full h-full justify-center items-center gap-2"
             onSubmit={handleFormSubmit}
           >
             <div
-              className="flex flex-row justify-center bg-white bg-opacity-[97%] p-2 rounded-md gap-10 flex-shrink-0"
+              className="flex flex-col gap-4 bg-white bg-opacity-[97%] p-6  flex-shrink-0 w-[80%] max-w-[500px] border-b-4 border-b-gray-950 box-border"
               style={{
-                backdropFilter: "blur(10px)",
+                backdropFilter: "blur(16px)",
               }}
             >
-              <div className="flex flex-col justify-center mb-4 px-6">
-                <h2 className="text-[#0f172a] font-semibold">
-                  {i18n.t("book.check_in")}
-                </h2>
-                <input
-                  className="bg-white rounded shadow-md text-black text-center"
-                  type="date"
-                  min={actual_date}
-                  value={checkIn}
-                  onChange={(e) => setCheckIn(e.target.value)}
-                />
+              <div className="flex gap-4 flex-wrap">
+                <div className="flex flex-col flex-1 md:w-1/2 gap-2">
+                  <h2 className="text-gray-950 font-semibold">
+                    {i18n.t("book.check_in")}
+                  </h2>
+                  <input
+                    className="bg-white border-2 border-gray-950 p-2 text-black text-center"
+                    type="date"
+                    min={actual_date}
+                    value={checkIn}
+                    onChange={(e) => setCheckIn(e.target.value)}
+                    required
+                  />
+                </div>
+                <div className="flex flex-col flex-1 md:w-1/2 gap-2">
+                  <h2 className="text-[#0f172a] font-semibold">
+                    {i18n.t("book.check_out")}
+                  </h2>
+                  <input
+                    className="bg-white border-2 border-gray-950 p-2 text-black text-center"
+                    type="date"
+                    min={actual_date}
+                    value={checkOut}
+                    onChange={(e) => setCheckOut(e.target.value)}
+                    required
+                  />
+                </div>
               </div>
-              <div className="flex flex-col justify-center mb-4">
-                <h2 className="text-[#0f172a] font-semibold">
-                  {i18n.t("book.check_out")}
-                </h2>
-                <input
-                  className="bg-white rounded shadow-md text-black text-center"
-                  type="date"
-                  min={actual_date}
-                  value={checkOut}
-                  onChange={(e) => setCheckOut(e.target.value)}
-                />
-              </div>
-              <div className="flex flex-col justify-center mb-4">
-                <h2 className="text-[#0f172a] font-semibold">
-                  {i18n.t("book.adults.name")}
-                </h2>
-                <select
-                  name=""
-                  id=""
-                  className="bg-white rounded shadow-md text-black text-center"
-                  defaultValue={adults}
-                  onChange={(e) => setAdults(e.target.value)}
-                >
-                  <option value="1">{i18n.t("book.adults.one")}</option>
-                  <option value="2">{i18n.t("book.adults.two")}</option>
-                  <option value="3">{i18n.t("book.adults.three")}</option>
-                  <option value="4">{i18n.t("book.adults.for")}</option>
-                  <option value="5">{i18n.t("book.adults.five")}</option>
-                  <option value="6">{i18n.t("book.adults.six")}</option>
-                  <option value="6">{i18n.t("book.adults.seven")}</option>
-                  <option value="6">{i18n.t("book.adults.eight")}</option>
-                  <option value="6">{i18n.t("book.adults.nine")}</option>
-                  <option value="6">{i18n.t("book.adults.ten")}</option>
-                </select>
-              </div>
-              <div className="flex flex-col justify-center mb-4">
-                <h2 className="text-[#0f172a] font-semibold">
-                  {i18n.t("book.childrens.name")}
-                </h2>
-                <select
-                  name=""
-                  id=""
-                  className="bg-white rounded shadow-md text-black text-center"
-                  defaultValue={children}
-                  onChange={(e) => setChildren(e.target.value)}
-                >
-                  <option value="0">{i18n.t("book.childrens.zero")}</option>
-                  <option value="1">{i18n.t("book.childrens.one")}</option>
-                  <option value="2">{i18n.t("book.childrens.two")}</option>
-                  <option value="3">{i18n.t("book.childrens.three")}</option>
-                  <option value="4">{i18n.t("book.childrens.for")}</option>
-                  <option value="5">{i18n.t("book.childrens.five")}</option>
-                  <option value="6">{i18n.t("book.childrens.six")}</option>
-                  <option value="6">{i18n.t("book.childrens.seven")}</option>
-                  <option value="6">{i18n.t("book.childrens.eight")}</option>
-                  <option value="6">{i18n.t("book.childrens.nine")}</option>
-                  <option value="6">{i18n.t("book.childrens.ten")}</option>
-                  <option value="6">{i18n.t("book.childrens.eleven")}</option>
-                </select>
+              <div className="flex gap-4">
+                <div className="flex flex-col w-1/2  justify-center mb-4">
+                  <h2 className="text-[#0f172a] font-semibold">
+                    {i18n.t("book.adults.name")}
+                  </h2>
+                  <select
+                    name=""
+                    id=""
+                    className="bg-white border-2 border-gray-950 p-2 text-black text-center"
+                    defaultValue={adults}
+                    onChange={(e) => setAdults(e.target.value)}
+                  >
+                    <option value="1">{i18n.t("book.adults.one")}</option>
+                    <option value="2">{i18n.t("book.adults.two")}</option>
+                    <option value="3">{i18n.t("book.adults.three")}</option>
+                    <option value="4">{i18n.t("book.adults.for")}</option>
+                    <option value="5">{i18n.t("book.adults.five")}</option>
+                    <option value="6">{i18n.t("book.adults.six")}</option>
+                    <option value="6">{i18n.t("book.adults.seven")}</option>
+                    <option value="6">{i18n.t("book.adults.eight")}</option>
+                    <option value="6">{i18n.t("book.adults.nine")}</option>
+                    <option value="6">{i18n.t("book.adults.ten")}</option>
+                  </select>
+                </div>
+                <div className="flex flex-col w-1/2  justify-center mb-4">
+                  <h2 className="text-[#0f172a] font-semibold">
+                    {i18n.t("book.childrens.name")}
+                  </h2>
+                  <select
+                    name=""
+                    id=""
+                    className="bg-white border-2 border-gray-950 p-2 text-black text-center"
+                    defaultValue={children}
+                    onChange={(e) => setChildren(e.target.value)}
+                  >
+                    <option value="0">{i18n.t("book.childrens.zero")}</option>
+                    <option value="1">{i18n.t("book.childrens.one")}</option>
+                    <option value="2">{i18n.t("book.childrens.two")}</option>
+                    <option value="3">{i18n.t("book.childrens.three")}</option>
+                    <option value="4">{i18n.t("book.childrens.for")}</option>
+                    <option value="5">{i18n.t("book.childrens.five")}</option>
+                    <option value="6">{i18n.t("book.childrens.six")}</option>
+                    <option value="6">{i18n.t("book.childrens.seven")}</option>
+                    <option value="6">{i18n.t("book.childrens.eight")}</option>
+                    <option value="6">{i18n.t("book.childrens.nine")}</option>
+                    <option value="6">{i18n.t("book.childrens.ten")}</option>
+                    <option value="6">{i18n.t("book.childrens.eleven")}</option>
+                  </select>
+                </div>
               </div>
               <input
                 type="submit"
-                className="bg-white rounded-lg shadow-md m-3 px-3 text-[#0f172a] font-bold text-center hover:outline hover:cursor-pointer"
+                className="bg-gray-900   text-white font-regular uppercase text-center p-4  cursor-pointer hover:bg-gray-900"
                 value={i18n.t("book.submit")}
               />
             </div>
