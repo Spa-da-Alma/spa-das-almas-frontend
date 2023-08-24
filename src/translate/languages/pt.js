@@ -1,5 +1,3 @@
-import { MdDescription } from "react-icons/md";
-
 const messages = {
   pt: {
     translations: {
@@ -80,6 +78,10 @@ const messages = {
         massages: "Massagens",
         pet: "Pet-Friendly",
         fast_checkout: "Fast Checkout",
+        nature: {
+          primary: "Amplo Espaço",
+          secundary: "e privacidade",
+        },
       },
       footer: {
         social_media: "Nossas redes sociais",

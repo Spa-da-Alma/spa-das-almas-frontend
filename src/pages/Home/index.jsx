@@ -190,7 +190,7 @@ function Home() {
           <h3 className="title">{i18n.t("titles.differentials")}</h3>
         </div>
         <div>
-          <ul className="grid grid-cols-2 md:flex md:justify-center gap-8 lg:gap-24">
+          <ul className="grid grid-cols-2 md:flex md:justify-center gap-8">
             {differentials.map((differential, index) => (
               <li
                 className="flex flex-col text-center items-center"
