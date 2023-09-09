@@ -1,6 +1,5 @@
 import { useState } from "react";
-import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
-import { BsCalendarDate } from "react-icons/bs";
+import { AiOutlineMenu, AiOutlineClose, AiFillCalendar } from "react-icons/ai";
 import items from "../../mocks/items";
 import { Link } from "react-router-dom";
 import {
@@ -8,6 +7,7 @@ import {
   MdOutlineKeyboardArrowUp,
 } from "react-icons/md";
 import languages from "../../mocks/languages";
+import { AiFillInstagram, AiFillFacebook } from "react-icons/ai";
 
 import { i18n } from "../../translate/i18n";
 
@@ -22,15 +22,31 @@ function Header() {
 
   return (
     <>
-      <div className="bg-gray-950 p-2 flex fixed top-0 left-0 w-full z-10 justify-between items-center lg:hidden h-[64px]">
+      <div className="bg-gray-950  flex fixed top-0 left-0 w-full z-10 justify-between items-center lg:hidden h-[64px]">
+        <div className="ml-auto flex gap-2 items-center">
+          <a
+            href="https://www.instagram.com/spadaalmamv/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <AiFillInstagram size={20} color="#FFF" />
+          </a>
+          <a
+            href="https://www.facebook.com/hospedagemspadaalma/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <AiFillFacebook size={20} color="#FFF" />
+          </a>
+        </div>
         <a
           href="https://hbook.hsystem.com.br/Booking?companyId=5f28e3fbab41d429a42ac74c"
           target="_blank"
           rel="noreferrer"
-          className="bg-white p-2 ml-auto flex items-center gap-2"
+          className="bg-[#EDBF55] ml-4 flex items-center gap-2 mr-4 h-full px-2"
         >
-          <BsCalendarDate size={20} />
-          <span>Reserve aqui!</span>
+          <AiFillCalendar size={20} color="#030712" />
+          <span className="text-gray-950">Reserve aqui!</span>
         </a>
       </div>
 

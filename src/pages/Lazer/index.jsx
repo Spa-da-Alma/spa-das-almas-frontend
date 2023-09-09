@@ -8,7 +8,7 @@ import lazer from "../../mocks/leisure";
 function Lazer() {
   return (
     <>
-      <div className="w-full">
+      <div className="w-full py-12">
         <Swiper
           effect={"coverflow"}
           grabCursor={true}
@@ -21,7 +21,7 @@ function Lazer() {
               slidesPerView: 2,
             },
             1024: {
-              slidesPerView: 2,
+              slidesPerView: 3,
             },
           }}
           coverflowEffect={{
@@ -31,7 +31,6 @@ function Lazer() {
             modifier: 10,
             slideShadows: false,
           }}
-          pagination={{ clickable: true }}
           // pagination={{ el: ".swiper-pagination", clickable: true }}
           navigation={{
             // nextEl: ".swiper-button-next",
@@ -42,18 +41,18 @@ function Lazer() {
         >
           {lazer.map((item, index) => (
             <SwiperSlide key={index}>
-              <div className="flex justify-center items-center h-[61px] my-8 p-12">
+              <div className="flex justify-center items-center h-[61px]mb-8 p-12">
                 <h1 className="text-2xl uppercase font-semibold text-center">
                   {item.name}
                 </h1>
               </div>
-              <div className="bg-slate-50 text-justify shadow-md">
+              <div className="bg-slate-50 text-justify shadow-md w-full h-[50vh]">
                 <img
-                  className="object-cover h-max-[300px] w-100% object-bottom"
+                  className="w-full h-[50%] object-cover"
                   src={item.image}
                   alt=""
                 />
-                <div className=" p-4 ">
+                <div className="p-4">
                   <p className="text-justify px-2 mt-2 mb-20 text-gray-900">
                     {item.description}
                   </p>
