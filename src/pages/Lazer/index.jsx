@@ -49,7 +49,7 @@ function Lazer() {
               </div>
               <div className="bg-slate-50 text-justify shadow-md">
                 <img
-                  className="object-cover h-[300px] w-full object-bottom"
+                  className="object-cover h-max-[300px] w-100% object-bottom"
                   src={item.image}
                   alt=""
                 />
