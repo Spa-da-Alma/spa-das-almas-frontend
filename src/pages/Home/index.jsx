@@ -9,6 +9,12 @@ import { Link } from "react-router-dom";
 import { MdOutlineArrowForwardIos } from "react-icons/md";
 import { useState } from "react";
 import { callAction, settings } from "../../utils/utils";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Navigation, Pagination } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import homeSlide from "../../mocks/homeSlide";
 
 function Home() {
   const [checkIn, setCheckIn] = useState("");
@@ -40,7 +46,119 @@ function Home() {
   return (
     <>
       <div className="relative">
-        <div
+        <Swiper
+          modules={[Pagination, Navigation, Autoplay]}
+          spaceBetween={0}
+          slidesPerView={1}
+          slidesPerGroup={1}
+          centeredSlides={true}
+          navigation={true}
+          loop={true}
+          autoplay={{
+            delay: 3000, // Defina o intervalo de mudança de imagem em milissegundos (3 segundos neste exemplo)
+            disableOnInteraction: false, // Mantém o autoplay mesmo se o usuário interagir com o Swiper
+          }}
+        >
+          {homeSlide.map((item, index) => (
+            <SwiperSlide key={index}>
+              <div className="h-[40vh] lg:h-[60vh]">
+                <img src={item.path} className="w-full h-full object-cover" />
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+
+        <form
+          className="absolute z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2  justify-center items-center gap-2 hidden lg:flex"
+          onSubmit={handleFormSubmit}
+        >
+          <div
+            className="flex flex-row justify-center bg-white bg-opacity-[97%] p-2 rounded-md gap-10 flex-shrink-0"
+            style={{
+              backdropFilter: "blur(10px)",
+            }}
+          >
+            <div className="flex flex-col justify-center mb-4 px-6">
+              <h2 className="text-[#0f172a] font-semibold">
+                {i18n.t("book.check_in")}
+              </h2>
+              <input
+                className="bg-white rounded shadow-md text-black text-center"
+                type="date"
+                min={actual_date}
+                value={checkIn}
+                onChange={(e) => setCheckIn(e.target.value)}
+              />
+            </div>
+            <div className="flex flex-col justify-center mb-4">
+              <h2 className="text-[#0f172a] font-semibold">
+                {i18n.t("book.check_out")}
+              </h2>
+              <input
+                className="bg-white rounded shadow-md text-black text-center"
+                type="date"
+                min={actual_date}
+                value={checkOut}
+                onChange={(e) => setCheckOut(e.target.value)}
+              />
+            </div>
+            <div className="flex flex-col justify-center mb-4">
+              <h2 className="text-[#0f172a] font-semibold">
+                {i18n.t("book.adults.name")}
+              </h2>
+              <select
+                name=""
+                id=""
+                className="bg-white rounded shadow-md text-black text-center"
+                defaultValue={adults}
+                onChange={(e) => setAdults(e.target.value)}
+              >
+                <option value="1">{i18n.t("book.adults.one")}</option>
+                <option value="2">{i18n.t("book.adults.two")}</option>
+                <option value="3">{i18n.t("book.adults.three")}</option>
+                <option value="4">{i18n.t("book.adults.for")}</option>
+                <option value="5">{i18n.t("book.adults.five")}</option>
+                <option value="6">{i18n.t("book.adults.six")}</option>
+                <option value="6">{i18n.t("book.adults.seven")}</option>
+                <option value="6">{i18n.t("book.adults.eight")}</option>
+                <option value="6">{i18n.t("book.adults.nine")}</option>
+                <option value="6">{i18n.t("book.adults.ten")}</option>
+              </select>
+            </div>
+            <div className="flex flex-col justify-center mb-4">
+              <h2 className="text-[#0f172a] font-semibold">
+                {i18n.t("book.childrens.name")}
+              </h2>
+              <select
+                name=""
+                id=""
+                className="bg-white rounded shadow-md text-black text-center"
+                defaultValue={children}
+                onChange={(e) => setChildren(e.target.value)}
+              >
+                <option value="0">{i18n.t("book.childrens.zero")}</option>
+                <option value="1">{i18n.t("book.childrens.one")}</option>
+                <option value="2">{i18n.t("book.childrens.two")}</option>
+                <option value="3">{i18n.t("book.childrens.three")}</option>
+                <option value="4">{i18n.t("book.childrens.for")}</option>
+                <option value="5">{i18n.t("book.childrens.five")}</option>
+                <option value="6">{i18n.t("book.childrens.six")}</option>
+                <option value="6">{i18n.t("book.childrens.seven")}</option>
+                <option value="6">{i18n.t("book.childrens.eight")}</option>
+                <option value="6">{i18n.t("book.childrens.nine")}</option>
+                <option value="6">{i18n.t("book.childrens.ten")}</option>
+                <option value="6">{i18n.t("book.childrens.eleven")}</option>
+              </select>
+            </div>
+            <input
+              type="submit"
+              className="bg-gray-900 rounded-lg shadow-md m-3 px-3 text-white font-bold text-center hover:outline hover:cursor-pointer hover:bg-gray-900"
+              value={i18n.t("book.submit")}
+            />
+          </div>
+        </form>
+
+        {/* <div
           className="h-[40vh] lg:h-[60vh] z-0 bg-cover bg-no-repeat bg-center lg:bg-bottom"
           style={{
             backgroundImage: `url('/assets/reception.jpg')`,
@@ -135,7 +253,7 @@ function Home() {
               />
             </div>
           </form>
-        </div>
+        </div> */}
       </div>
       <div className="">
         <div className="p-4 md:px-8 lg:px-12">
