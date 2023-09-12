@@ -13,12 +13,12 @@ export default [
     },
     {
         name: i18n.t("leisure.sauna.name"),
-        image: "/assets/leisure/ofuro.jpg",
+        image: "/assets/leisure/sauna.jpeg",
         description: i18n.t("leisure.sauna.description"),
     },
     {
         name: i18n.t("leisure.woodland.name"),
-        image: "/assets/leisure/ofuro.jpg",
+        image: "/assets/leisure/bosque.jpg",
         description: i18n.t("leisure.woodland.description"),
     },
     {
