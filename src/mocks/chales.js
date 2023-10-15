@@ -108,10 +108,7 @@ export default [
     name: "monviso",
     images: [
       "/assets/chales/monviso/IMG_0313.JPG",
-      "/assets/chales/monviso/IMG_0057.JPG",
-      "/assets/chales/monviso/IMG_0092.JPG",
       "/assets/chales/monviso/IMG_0095.JPG",
-      "/assets/chales/monviso/IMG_0104.JPG",
       "/assets/chales/monviso/IMG_0136.JPG",
       "/assets/chales/monviso/IMG_0188.JPG",
       "/assets/chales/monviso/IMG_0216.JPG",

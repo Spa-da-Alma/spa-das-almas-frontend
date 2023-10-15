@@ -12,6 +12,7 @@ const messages = {
         leisure: "Leisure",
         book: "Book",
         services: "Services",
+        about_us: "About Us",
       },
       book: {
         check_in: "Check In",
@@ -64,6 +65,7 @@ const messages = {
             "Leaving São Paulo, take the Fernão Dias highway (BR-381) towards Belo Horizonte. After the SP/MG border, drive for another 30 km through the towns of Extrema and Itapeva and enter Camanducaia to access the 29 km Camanducaia/M.Verde road up the mountain. At about Km 13 there will be a bridge. After this bridge, take the second right and follow it for another 17 km until you reach the city gate. After reaching the gate, follow Monte Verde Avenue, which is the continuation of the road, until Bradesco Square. You can go straight ahead, going around the curve on the right at the Chalana restaurant on Rua da Represa and going straight ahead until a fork where you should go up on the left until you reach the Spa da Alma guesthouse, which is at the end of this street! We are at Rua da Represa, 1477. ",
         },
         differentials: "Our differentials",
+        about_us: "Get to know our accommodation",
       },
       paragraphs: {
         see_more: "See more",
@@ -93,22 +95,22 @@ const messages = {
         martigny: {
           name: "martigny",
           description:
-            "Rustic and artisanal decoration, all glassed with a privileged view of the mountains and sunset. Ambient heating system and air conditioning. Kingsize bed with 1000-thread count linens and plush towels. Fireplace area with a large sofa bed and Smart 4K TV with home theater. Mini kitchen equipped with a cooktop, sink, minibar, microwave, basic utensils, fondue set, and Nespresso coffee maker. Bathtub with hydro massage for up to 3 people and a skylight. The bathroom features heated floors, a heated towel rack, double sinks, and dual showers. The space includes a desk and office chair. Fiber optic internet. ",
+            "Rustic and artisanal decoration, all glassed with a privileged view of the mountains and sunset. Ambient heating system and air conditioning. Kingsize bed with 1000-thread count linens and plush towels. Fireplace area with a large sofa bed and Smart 4K TV with home theater. Mini kitchen equipped with a cooktop, sink, minibar, microwave, basic utensils, fondue set, and Nespresso coffee maker. Bathtub with hydro massage for up to 3 people and a skylight. The bathroom features heated floors, a heated towel rack, double sinks, and dual showers. The space includes a desk and office chair. Fiber optic internet.",
         },
         chamonix: {
           name: "chamonix",
           description:
-            "One suite or two bedrooms with a dining room, fireplace, and American kitchen. Bathroom with a hot tub, powder room, and a view of the araucaria and pine forest. ",
+            "This chalet's standout features are the hot tub and fireplace. This chalet includes 2 bedrooms, a kitchenette, and 2 bathrooms with a bath and a shower. Guests can prepare meals in the kitchenette, which is equipped with a stovetop, kitchenware, and a microwave. The chalet also offers a minibar, a dining area, a wardrobe, a flat-screen TV with satellite channels, as well as garden views. The unit has 4 beds.",
         },
         mont_blanc: {
           name: "mont blanc",
           description:
-            "One suite with a double whirlpool in the bedroom, bathroom, and a private panoramic deck overlooking the forest. ",
+            "This chalet features a hot tub and a fireplace. The chalet has 1 bedroom and 1 bathroom with a bath and a shower. With a balcony offering garden views, this chalet also features a minibar and a flat-screen TV with satellite channels. The unit has 1 bed.",
         },
         monviso: {
           name: "monviso",
           description:
-            "Cottage with five bedrooms, accommodating up to twelve people, facing the pool, dining room, living room with fireplace, and game room. ",
+            "The fireplace is a top feature of this holiday home. This spacious holiday home includes 2 living rooms, 5 separate bedrooms, and 2 bathrooms with a shower and a bidet. The well-equipped kitchen has a stovetop, a refrigerator, kitchenware, and an oven. With a terrace boasting garden views, this holiday home also offers a washing machine and a flat-screen TV with satellite channels. The unit has 8 beds.",
         },
         cheverny: {
           name: "cheverny",
@@ -118,7 +120,7 @@ const messages = {
         charmey: {
           name: "charmey",
           description:
-            "One suite with a double whirlpool in the bedroom, bathroom, and a bay window with a view of the sunset. ",
+            "This chalet's standout features are the hot tub and fireplace. The chalet has 1 bedroom and 1 bathroom with a bath and a shower. The chalet also offers a flat-screen TV with satellite channels, a minibar, a wardrobe, heating, as well as garden views. The unit has 1 bed.",
         },
       },
       leisure: {

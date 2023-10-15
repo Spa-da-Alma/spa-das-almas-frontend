@@ -31,6 +31,12 @@ export default [
     target: "_self",
   },
   {
+    name: i18n.t("items.about_us"),
+    icon: SiFunimation,
+    path: "/sobre-nos",
+    target: "_self",
+  },
+  {
     name: i18n.t("items.book"),
     icon: BsFillChatSquareHeartFill,
     path: "https://hbook.hsystem.com.br/Booking?companyId=5f28e3fbab41d429a42ac74c",

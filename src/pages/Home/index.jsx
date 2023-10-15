@@ -22,6 +22,22 @@ function Home() {
   const [adults, setAdults] = useState(2);
   const [children, setChildren] = useState(0);
   const actual_date = new Date().toISOString().split("T")[0];
+  const [showMore, setShowMore] = useState(false);
+
+  const photos = [
+    "/assets/chales/martigny/IMG_0138.JPG",
+    "/assets/chales/martigny/IMG_0048.JPG",
+    "/assets/chales/martigny/IMG_0051.JPG",
+    "/assets/chales/martigny/IMG_0055.JPG",
+    "/assets/chales/martigny/IMG_0056.JPG",
+    "/assets/chales/martigny/IMG_0057.JPG",
+    "/assets/chales/martigny/IMG_0058.JPG",
+    "/assets/chales/martigny/IMG_0061.JPG",
+    "/assets/chales/martigny/IMG_0065.JPG",
+    "/assets/chales/martigny/IMG_0066.JPG",
+    "/assets/chales/martigny/IMG_0067.JPG",
+    "/assets/chales/martigny/IMG_0068.JPG",
+  ];
 
   const handleFormSubmit = (e) => {
     e.preventDefault();
@@ -55,8 +71,8 @@ function Home() {
           navigation={true}
           loop={true}
           autoplay={{
-            delay: 3000, // Defina o intervalo de mudança de imagem em milissegundos (3 segundos neste exemplo)
-            disableOnInteraction: false, // Mantém o autoplay mesmo se o usuário interagir com o Swiper
+            delay: 3000, 
+            disableOnInteraction: false,
           }}
         >
           {homeSlide.map((item, index) => (
@@ -157,103 +173,6 @@ function Home() {
             />
           </div>
         </form>
-
-        {/* <div
-          className="h-[40vh] lg:h-[60vh] z-0 bg-cover bg-no-repeat bg-center lg:bg-bottom"
-          style={{
-            backgroundImage: `url('/assets/reception.jpg')`,
-          }}
-        >
-          <form
-            className="hidden lg:flex w-full h-full justify-center items-center gap-2"
-            onSubmit={handleFormSubmit}
-          >
-            <div
-              className="flex flex-row justify-center bg-white bg-opacity-[97%] p-2 rounded-md gap-10 flex-shrink-0"
-              style={{
-                backdropFilter: "blur(10px)",
-              }}
-            >
-              <div className="flex flex-col justify-center mb-4 px-6">
-                <h2 className="text-[#0f172a] font-semibold">
-                  {i18n.t("book.check_in")}
-                </h2>
-                <input
-                  className="bg-white rounded shadow-md text-black text-center"
-                  type="date"
-                  min={actual_date}
-                  value={checkIn}
-                  onChange={(e) => setCheckIn(e.target.value)}
-                />
-              </div>
-              <div className="flex flex-col justify-center mb-4">
-                <h2 className="text-[#0f172a] font-semibold">
-                  {i18n.t("book.check_out")}
-                </h2>
-                <input
-                  className="bg-white rounded shadow-md text-black text-center"
-                  type="date"
-                  min={actual_date}
-                  value={checkOut}
-                  onChange={(e) => setCheckOut(e.target.value)}
-                />
-              </div>
-              <div className="flex flex-col justify-center mb-4">
-                <h2 className="text-[#0f172a] font-semibold">
-                  {i18n.t("book.adults.name")}
-                </h2>
-                <select
-                  name=""
-                  id=""
-                  className="bg-white rounded shadow-md text-black text-center"
-                  defaultValue={adults}
-                  onChange={(e) => setAdults(e.target.value)}
-                >
-                  <option value="1">{i18n.t("book.adults.one")}</option>
-                  <option value="2">{i18n.t("book.adults.two")}</option>
-                  <option value="3">{i18n.t("book.adults.three")}</option>
-                  <option value="4">{i18n.t("book.adults.for")}</option>
-                  <option value="5">{i18n.t("book.adults.five")}</option>
-                  <option value="6">{i18n.t("book.adults.six")}</option>
-                  <option value="6">{i18n.t("book.adults.seven")}</option>
-                  <option value="6">{i18n.t("book.adults.eight")}</option>
-                  <option value="6">{i18n.t("book.adults.nine")}</option>
-                  <option value="6">{i18n.t("book.adults.ten")}</option>
-                </select>
-              </div>
-              <div className="flex flex-col justify-center mb-4">
-                <h2 className="text-[#0f172a] font-semibold">
-                  {i18n.t("book.childrens.name")}
-                </h2>
-                <select
-                  name=""
-                  id=""
-                  className="bg-white rounded shadow-md text-black text-center"
-                  defaultValue={children}
-                  onChange={(e) => setChildren(e.target.value)}
-                >
-                  <option value="0">{i18n.t("book.childrens.zero")}</option>
-                  <option value="1">{i18n.t("book.childrens.one")}</option>
-                  <option value="2">{i18n.t("book.childrens.two")}</option>
-                  <option value="3">{i18n.t("book.childrens.three")}</option>
-                  <option value="4">{i18n.t("book.childrens.for")}</option>
-                  <option value="5">{i18n.t("book.childrens.five")}</option>
-                  <option value="6">{i18n.t("book.childrens.six")}</option>
-                  <option value="6">{i18n.t("book.childrens.seven")}</option>
-                  <option value="6">{i18n.t("book.childrens.eight")}</option>
-                  <option value="6">{i18n.t("book.childrens.nine")}</option>
-                  <option value="6">{i18n.t("book.childrens.ten")}</option>
-                  <option value="6">{i18n.t("book.childrens.eleven")}</option>
-                </select>
-              </div>
-              <input
-                type="submit"
-                className="bg-gray-900 rounded-lg shadow-md m-3 px-3 text-white font-bold text-center hover:outline hover:cursor-pointer hover:bg-gray-900"
-                value={i18n.t("book.submit")}
-              />
-            </div>
-          </form>
-        </div> */}
       </div>
       <div className="">
         <div className="p-4 md:px-8 lg:px-12">
@@ -321,15 +240,74 @@ function Home() {
             ))}
           </ul>
         </div>
+        <div className="p-4 md:px-8 lg:px-12">
+          <h3 className="title">{i18n.t("titles.about_us")}</h3>
+        </div>
+        <div className="p-4 md:px-8 lg:px-12">
+          <div className="container mx-auto">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+              {photos.map((photo, index) => (
+                <Link to="/sobre-nos">
+                  <div
+                    key={index}
+                    className="bg-white rounded shadow-lg overflow-hidden p-2"
+                  >
+                    <img
+                      src={photo}
+                      alt={`Imagem ${index + 1}`}
+                      className="w-full h-48 object-cover rounded"
+                    />
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </div>
         <div className="p-4 md:px-8 lg:px-12" id="location">
           <h3 className="title">{i18n.t("titles.location.name")}</h3>
         </div>
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d5051.144008075224!2d-46.021924555312545!3d-22.863270661739612!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cc104a3a67a26b%3A0x34aa88739c7f0e92!2sHospedagem%20Spa%20da%20Alma!5e0!3m2!1sen!2sbr!4v1689790413916!5m2!1sen!2sbr"
-          width="100%"
-          height="450"
-          className="mb-4 md:mb-8 lg:mb-12"
-        ></iframe>
+        <div className="p-4 md:px-8 lg:px-12">
+          <div className="container mx-auto">
+            <div className="flex flex-col md:flex-row items-center">
+              <div className="bg-white rounded shadow-lg overflow-hidden p-2 md:w-3/4 lg:w-2/3 xl:w-1/2 md:mr-4">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d5051.144008075224!2d-46.021924555312545!3d-22.863270661739612!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cc104a3a67a26b%3A0x34aa88739c7f0e92!2sHospedagem%20Spa%20da%20Alma!5e0!3m2!1sen!2sbr!4v1689790413916!5m2!1sen!2sbr"
+                  width="100%"
+                  height="450"
+                ></iframe>
+              </div>
+              <div className="text-center md:text-left">
+                <div className="text-justify text-lg text-gray-900 px-4">
+                  <p className="inline">
+                    {i18n.t("titles.location.description").length > 400
+                      ? showMore
+                        ? i18n.t("titles.location.description")
+                        : `${i18n
+                            .t("titles.location.description")
+                            .slice(0, 400)}...`
+                      : i18n.t("titles.location.description")}
+                  </p>
+                  {i18n.t("titles.location.description").length > 400 &&
+                    (showMore ? (
+                      <span
+                        className="inline ml-2 text-blue-600 cursor-pointer"
+                        onClick={() => setShowMore(!showMore)}
+                      >
+                        {i18n.t("paragraphs.see_less")}
+                      </span>
+                    ) : (
+                      <span
+                        className="inline ml-2 text-blue-600 cursor-pointer"
+                        onClick={() => setShowMore(!showMore)}
+                      >
+                        {i18n.t("paragraphs.see_more")}
+                      </span>
+                    ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </>
   );

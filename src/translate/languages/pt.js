@@ -12,6 +12,7 @@ const messages = {
         leisure: "Lazer",
         book: "Reservar",
         services: "Serviços",
+        about_us: "Sobre Nós",
       },
       book: {
         check_in: "Entrada",
@@ -64,6 +65,8 @@ const messages = {
             "Saindo de São Paulo, utilize a Rod. Fernão Dias (BR-381) sentido Belo Horizonte. Após a Divisa SP/MG siga por mais 30Km passando pelas cidades de Extrema e Itapeva e entrando em Camanducaia para acessar a estrada Camanducaia/M.Verde de 29Km montanha acima. No Km 13 aproximadamente haverá uma ponte. Após esta ponte entre na segunda à direita e siga por mais 17 Km até o até o portal da Cidade Após chegar ao portal, siga pela avenida Monte Verde, que é a continuação da estrada, até a praça do Bradesco. Você pode seguir em frente, contornando a curva em subida á direita no restaurante Chalana na Rua da Represa e seguindo em frente até uma bifurcação onde você deverá subir a esquerda até chegar na pousada Hospedagem Spa da Alma, que fica no final desta rua! Estamos na Rua da Represa, 1477. ",
         },
         differentials: "Nossos diferenciais",
+        about_us: "Conheça nossa hospedagem",
+
       },
       paragraphs: {
         see_more: "Veja mais",
@@ -93,22 +96,22 @@ const messages = {
         martigny: {
           name: "martigny",
           description:
-            "Decoração estilo rústico e artesanal,  todo envidraçado com vista privilegiada  para a montanha e o pôr do sol.  Sistema de calefação de ambiente e ar condicionado.  Cama kingsize com enxoval de 1000 fios e toalhas felpudas.  Espaço da lareira com sofá-cama grande e Smart TV 4K, com home theater.  Mini cozinha com cooktop, pia, frigobar, microondas,  utensílios básicos, aparelho para fondue e cafeteira Nespresso.  Banheira com hidromassagem para até 3 pessoas e teto solar.  O banheiro com piso aquecido e toalheiro térmico, lavatórios e duchas duplas. Ambiente com escrivaninha e cadeira de escritório. Internet por fibra óptica. ",
+            "Decoração estilo rústico e artesanal,  todo envidraçado com vista privilegiada  para a montanha e o pôr do sol.  Sistema de calefação de ambiente e ar condicionado.  Cama kingsize com enxoval de 1000 fios e toalhas felpudas.  Espaço da lareira com sofá-cama grande e Smart TV 4K, com home theater.  Mini cozinha com cooktop, pia, frigobar, microondas,  utensílios básicos, aparelho para fondue e cafeteira Nespresso.  Banheira com hidromassagem para até 3 pessoas e teto solar.  O banheiro com piso aquecido e toalheiro térmico, lavatórios e duchas duplas. Ambiente com escrivaninha e cadeira de escritório. Internet por fibra óptica.",
         },
         chamonix: {
           name: "chamonix",
           description:
-            "Uma suíte ou dois quartos com sala de jantar, lareira e cozinha americana, banheiro com ofurô, lavabo e vista para o bosque de araucárias e pinheiros. ",
+            "As principais características deste chalé são a banheira de hidromassagem e a lareira. Este chalé inclui 2 quartos, uma cozinha compacta e 2 banheiros com banheira e chuveiro. Os hóspedes podem preparar refeições na cozinha compacta, que está equipada com um fogão, utensílios de cozinha e um micro-ondas. O chalé oferece um minibar, uma área de jantar, um guarda-roupa, uma TV de tela plana com canais via satélite, bem como vistas para o jardim. A unidade possui 4 camas.",
         },
         mont_blanc: {
           name: "mont blanc",
           description:
-            "Uma Suíte com  hidromassagem dupla no quarto, banheiro e deck panorâmico privativo com vista para o bosque. ",
+            "Este chalé possui uma banheira de hidromassagem e uma lareira. O chalé possui 1 quarto e 1 banheiro com banheira e chuveiro. Com uma varanda com vistas para o jardim, este chalé também dispõe de um minibar e uma TV de tela plana com canais via satélite. A unidade possui 1 cama.",
         },
         monviso: {
           name: "monviso",
           description:
-            "Chalé com cinco quartos, que acomodam até doze Pessoas, de frente para a piscina, sala de jantar, sala com lareira e sala de jogos. ",
+            "A lareira é uma característica destacada desta casa de férias. Esta espaçosa casa de férias inclui 2 salas de estar, 5 quartos separados e 2 banheiros com chuveiro e bidê. A cozinha bem equipada possui um fogão, geladeira, utensílios de cozinha e um forno. Com um terraço com vistas para o jardim, esta casa de férias também oferece uma máquina de lavar roupa e uma TV de tela plana com canais via satélite. A unidade possui 8 camas.",
         },
         cheverny: {
           name: "cheverny",
@@ -118,7 +121,7 @@ const messages = {
         charmey: {
           name: "charmey",
           description:
-            "Uma Suíte com  hidromassagem dupla no quarto, banheiro e baywindow com vista para o pôr-do-sol. ",
+            "As principais características deste chalé são a banheira de hidromassagem e a lareira. O chalé possui 1 quarto e 1 banheiro com banheira e chuveiro. O chalé oferece uma TV de tela plana com canais via satélite, um minibar, um guarda-roupa, aquecimento e vistas para o jardim. A unidade possui 1 cama.",
         },
       },
       leisure: {
