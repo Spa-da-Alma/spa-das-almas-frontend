@@ -71,7 +71,7 @@ function Home() {
           navigation={true}
           loop={true}
           autoplay={{
-            delay: 3000, 
+            delay: 3000,
             disableOnInteraction: false,
           }}
         >
@@ -267,43 +267,41 @@ function Home() {
           <h3 className="title">{i18n.t("titles.location.name")}</h3>
         </div>
         <div className="p-4 md:px-8 lg:px-12">
-          <div className="container mx-auto">
-            <div className="flex flex-col md:flex-row items-center">
-              <div className="bg-white rounded shadow-lg overflow-hidden p-2 md:w-3/4 lg:w-2/3 xl:w-1/2 md:mr-4">
-                <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d5051.144008075224!2d-46.021924555312545!3d-22.863270661739612!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cc104a3a67a26b%3A0x34aa88739c7f0e92!2sHospedagem%20Spa%20da%20Alma!5e0!3m2!1sen!2sbr!4v1689790413916!5m2!1sen!2sbr"
-                  width="100%"
-                  height="450"
-                ></iframe>
-              </div>
-              <div className="text-center md:text-left">
-                <div className="text-justify text-lg text-gray-900 px-4">
-                  <p className="inline">
-                    {i18n.t("titles.location.description").length > 400
-                      ? showMore
-                        ? i18n.t("titles.location.description")
-                        : `${i18n
-                            .t("titles.location.description")
-                            .slice(0, 400)}...`
-                      : i18n.t("titles.location.description")}
-                  </p>
-                  {i18n.t("titles.location.description").length > 400 &&
-                    (showMore ? (
-                      <span
-                        className="inline ml-2 text-blue-600 cursor-pointer"
-                        onClick={() => setShowMore(!showMore)}
-                      >
-                        {i18n.t("paragraphs.see_less")}
-                      </span>
-                    ) : (
-                      <span
-                        className="inline ml-2 text-blue-600 cursor-pointer"
-                        onClick={() => setShowMore(!showMore)}
-                      >
-                        {i18n.t("paragraphs.see_more")}
-                      </span>
-                    ))}
-                </div>
+          <div className="flex flex-col md:flex-row justify-center items-center gap-4 ">
+            <div className=" rounded shadow-lg overflow-hidden p-2 md:w-3/4 lg:w-2/3 xl:w-1/2">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d5051.144008075224!2d-46.021924555312545!3d-22.863270661739612!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cc104a3a67a26b%3A0x34aa88739c7f0e92!2sHospedagem%20Spa%20da%20Alma!5e0!3m2!1sen!2sbr!4v1689790413916!5m2!1sen!2sbr"
+                width="100%"
+                height="450"
+              ></iframe>
+            </div>
+            <div className="text-center md:text-left  md:w-1/4 lg:1/3">
+              <div className="text-justify text-lg text-gray-900 px-4">
+                <p className="inline">
+                  {i18n.t("titles.location.description").length > 400
+                    ? showMore
+                      ? i18n.t("titles.location.description")
+                      : `${i18n
+                          .t("titles.location.description")
+                          .slice(0, 400)}...`
+                    : i18n.t("titles.location.description")}
+                </p>
+                {i18n.t("titles.location.description").length > 400 &&
+                  (showMore ? (
+                    <span
+                      className="inline ml-2 text-blue-600 cursor-pointer"
+                      onClick={() => setShowMore(!showMore)}
+                    >
+                      {i18n.t("paragraphs.see_less")}
+                    </span>
+                  ) : (
+                    <span
+                      className="inline ml-2 text-blue-600 cursor-pointer"
+                      onClick={() => setShowMore(!showMore)}
+                    >
+                      {i18n.t("paragraphs.see_more")}
+                    </span>
+                  ))}
               </div>
             </div>
           </div>
