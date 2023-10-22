@@ -46,6 +46,7 @@ const messages = {
           eleven: "11 Childrens",
         },
         submit: "Consult prices",
+        availability: "consult availability",
       },
       review: {
         from: "review taken from",
@@ -61,8 +62,9 @@ const messages = {
         services: "Services",
         location: {
           name: "Location",
+          slogan: "The Spa for Your Soul",
           description:
-            "Leaving São Paulo, take the Fernão Dias highway (BR-381) towards Belo Horizonte. After the SP/MG border, drive for another 30 km through the towns of Extrema and Itapeva and enter Camanducaia to access the 29 km Camanducaia/M.Verde road up the mountain. At about Km 13 there will be a bridge. After this bridge, take the second right and follow it for another 17 km until you reach the city gate. After reaching the gate, follow Monte Verde Avenue, which is the continuation of the road, until Bradesco Square. You can go straight ahead, going around the curve on the right at the Chalana restaurant on Rua da Represa and going straight ahead until a fork where you should go up on the left until you reach the Spa da Alma guesthouse, which is at the end of this street! We are at Rua da Represa, 1477. ",
+            "Located in the majestic mountains of Monte Verde, Minas Gerais, Hospedagem Spa da Alma offers a unique experience for those looking to reconnect with nature. Our inn is a charming retreat with chalets strategically spaced on the mountaintop, providing breathtaking views. As the evening approaches, the spectacle of the sunset over the mountains and the forest blends with the natural rhythms of the breeze, creating a one-of-a-kind visual experience. Additionally, guests have the opportunity to experience the local wildlife and flora, spotting everything from squirrels to toucans. You and your pet are very welcome to enjoy all of our amenities.",
         },
         differentials: "Our differentials",
         about_us: "Get to know our accommodation",

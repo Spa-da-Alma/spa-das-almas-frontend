@@ -2,39 +2,46 @@ import { i18n } from "../../translate/i18n";
 import { useState } from "react";
 
 function SobreNos() {
-  const [showMore, setShowMore] = useState(false);
-
   return (
-    <div className="flex flex-col gap-4 lg:gap-4">
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d5051.144008075224!2d-46.021924555312545!3d-22.863270661739612!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cc104a3a67a26b%3A0x34aa88739c7f0e92!2sHospedagem%20Spa%20da%20Alma!5e0!3m2!1sen!2sbr!4v1689790413916!5m2!1sen!2sbr"
-        width="100%"
-        height="500"
-      ></iframe>
-      <div className="text-justify text-lg text-gray-900 px-4">
-        <p className="inline">
-          {i18n.t("titles.location.description").length > 400
-            ? showMore
-              ? i18n.t("titles.location.description")
-              : `${i18n.t("titles.location.description").slice(0, 400)}...`
-            : i18n.t("titles.location.description")}
-        </p>
-        {i18n.t("titles.location.description").length > 400 &&
-          (showMore ? (
-            <span
-              className="inline ml-2 text-blue-600 cursor-pointer"
-              onClick={() => setShowMore(!showMore)}
-            >
-              {i18n.t("paragraphs.see_less")}
-            </span>
-          ) : (
-            <span
-              className="inline ml-2 text-blue-600 cursor-pointer"
-              onClick={() => setShowMore(!showMore)}
-            >
-              {i18n.t("paragraphs.see_more")}
-            </span>
-          ))}
+    <div className="p-6 md:px-8 lg:px-12">
+      <div className="flex flex-col md:flex-row justify-center items-center gap-4 ">
+        <div className=" rounded shadow-lg overflow-hidden p-2 md:w-3/4 lg:w-2/3 xl:w-1/3">
+          <img
+            src="/assets/chales/martigny/IMG_0138.JPG"
+            className="w-full h-72 object-cover rounded"
+          />
+        </div>
+        <div className="text-center md:text-left  md:w-1/4 lg:1/3">
+          <h2 className="text-[#1f2937] font-bold text-3xl mb-2 px-4">
+            Descubra Mais Sobre Nós
+          </h2>
+          <div className="flex flex-col px-4 gap-4">
+            <p className="text-left text-sm text-gray-700 font-thin">
+              Localizada em Monte Verde-MG, a Hospedagem Spa “da Alma” tem como
+              propósito ser uma pequena pousada, em meio a uma ampla área verde
+              e arborizada. Chalés distantes uns dos outros no topo da montanha
+              e rodeados pela beleza indescritível da região.
+            </p>
+            <p className="text-left text-sm text-gray-700 font-thin">
+              Foi projetada de modo a reunir diferentes sensações e sentimentos
+              que permitem a seus visitantes uma experiência verdadeiramente
+              única. Ao pôr do sol, a paisagem se converte num desafio para os
+              sentidos que se mistura com os ritmos naturais da brisa e o
+              espetáculo natural do pôr do sol, montanha e floresta,
+              tranformando-se numa só sensação ótica.
+            </p>
+            <p className="text-left text-sm text-gray-700 font-thin">
+              Este acúmulo de sensações que se despertam ao entrar em contato
+              com fauna e flora do local. Esta experiência se completa mais
+              ainda com a maravilhosa oportunidade de avistar esquilos, macacos,
+              coelhos selvagens e até tucanos. Chegar em Monte Verde e poder
+              desfrutar de todos esses prazeres e particularidades da região, é
+              voltar à nossa sabedoria mais primitiva e ao contato mais natural
+              com a terra. Seu pet é bem-vindo na nossa pousada, nos informe no
+              momento da reserva para conhecer os detalhes!
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   );

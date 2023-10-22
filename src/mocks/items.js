@@ -4,6 +4,7 @@ import { MdCottage } from "react-icons/md";
 import { BsFillChatSquareHeartFill } from "react-icons/bs";
 import { SiFunimation } from "react-icons/si";
 import { i18n } from "../translate/i18n";
+import { TbMessageCircleSearch } from "react-icons/tb";
 
 export default [
   {
@@ -19,12 +20,6 @@ export default [
     target: "_self",
   },
   {
-    name: i18n.t("items.location"),
-    icon: HiLocationMarker,
-    path: "/localizacao",
-    target: "_self",
-  },
-  {
     name: i18n.t("items.leisure"),
     icon: SiFunimation,
     path: "/lazer",
@@ -32,7 +27,7 @@ export default [
   },
   {
     name: i18n.t("items.about_us"),
-    icon: SiFunimation,
+    icon: TbMessageCircleSearch,
     path: "/sobre-nos",
     target: "_self",
   },

@@ -244,23 +244,21 @@ function Home() {
           <h3 className="title">{i18n.t("titles.about_us")}</h3>
         </div>
         <div className="p-4 md:px-8 lg:px-12">
-          <div className="container mx-auto">
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-              {photos.map((photo, index) => (
-                <Link to="/sobre-nos">
-                  <div
-                    key={index}
-                    className="bg-white rounded shadow-lg overflow-hidden p-2"
-                  >
-                    <img
-                      src={photo}
-                      alt={`Imagem ${index + 1}`}
-                      className="w-full h-48 object-cover rounded"
-                    />
-                  </div>
-                </Link>
-              ))}
-            </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            {photos.map((photo, index) => (
+              <Link to="/sobre-nos">
+                <div
+                  key={index}
+                  className="bg-white rounded shadow-lg overflow-hidden p-2"
+                >
+                  <img
+                    src={photo}
+                    alt={`Imagem ${index + 1}`}
+                    className="w-full h-48 object-cover rounded"
+                  />
+                </div>
+              </Link>
+            ))}
           </div>
         </div>
         <div className="p-4 md:px-8 lg:px-12" id="location">
@@ -268,41 +266,31 @@ function Home() {
         </div>
         <div className="p-4 md:px-8 lg:px-12">
           <div className="flex flex-col md:flex-row justify-center items-center gap-4 ">
+            <div className="text-center md:text-left  md:w-1/4 lg:1/3">
+              <div className="flex flex-col px-4">
+                <h2 className="text-[#1f2937] font-bold text-3xl mb-2">
+                  {i18n.t("titles.location.slogan")}
+                </h2>
+                <p className="text-left text-sm text-gray-700 font-thin">
+                  {i18n.t("titles.location.description")}
+                </p>
+              </div>
+              <div className="flex flex-row justify-center md:mt-1">
+                <a
+                  className="bg-gray-900 rounded-lg shadow-md m-3 p-2 text-white font-bold text-center hover:outline hover:cursor-pointer hover:bg-gray-900"
+                  href="https://hbook.hsystem.com.br/Booking?companyId=5f28e3fbab41d429a42ac74c"
+                  target="_blank"
+                >
+                  {i18n.t("book.availability")}
+                </a>
+              </div>
+            </div>
             <div className=" rounded shadow-lg overflow-hidden p-2 md:w-3/4 lg:w-2/3 xl:w-1/2">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d5051.144008075224!2d-46.021924555312545!3d-22.863270661739612!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cc104a3a67a26b%3A0x34aa88739c7f0e92!2sHospedagem%20Spa%20da%20Alma!5e0!3m2!1sen!2sbr!4v1689790413916!5m2!1sen!2sbr"
                 width="100%"
                 height="450"
               ></iframe>
-            </div>
-            <div className="text-center md:text-left  md:w-1/4 lg:1/3">
-              <div className="text-justify text-lg text-gray-900 px-4">
-                <p className="inline">
-                  {i18n.t("titles.location.description").length > 400
-                    ? showMore
-                      ? i18n.t("titles.location.description")
-                      : `${i18n
-                          .t("titles.location.description")
-                          .slice(0, 400)}...`
-                    : i18n.t("titles.location.description")}
-                </p>
-                {i18n.t("titles.location.description").length > 400 &&
-                  (showMore ? (
-                    <span
-                      className="inline ml-2 text-blue-600 cursor-pointer"
-                      onClick={() => setShowMore(!showMore)}
-                    >
-                      {i18n.t("paragraphs.see_less")}
-                    </span>
-                  ) : (
-                    <span
-                      className="inline ml-2 text-blue-600 cursor-pointer"
-                      onClick={() => setShowMore(!showMore)}
-                    >
-                      {i18n.t("paragraphs.see_more")}
-                    </span>
-                  ))}
-              </div>
             </div>
           </div>
         </div>

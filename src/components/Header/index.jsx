@@ -22,21 +22,21 @@ function Header() {
 
   return (
     <>
-      <div className="bg-gray-950  flex fixed top-0 left-0 w-full z-10 justify-between items-center lg:hidden h-[64px]">
+      <div className="bg-gray-900  flex fixed top-0 left-0 w-full z-10 justify-between items-center lg:hidden h-[60px]">
         <div className="ml-auto flex gap-2 items-center">
           <a
             href="https://www.instagram.com/spadaalmamv/"
             target="_blank"
             rel="noreferrer"
           >
-            <AiFillInstagram size={20} color="#FFF" />
+            <AiFillInstagram size={30} color="#FFF" />
           </a>
           <a
             href="https://www.facebook.com/hospedagemspadaalma/"
             target="_blank"
             rel="noreferrer"
           >
-            <AiFillFacebook size={20} color="#FFF" />
+            <AiFillFacebook size={30} color="#FFF" />
           </a>
         </div>
         <a

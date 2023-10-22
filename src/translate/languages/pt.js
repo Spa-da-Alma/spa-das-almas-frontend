@@ -46,6 +46,7 @@ const messages = {
           eleven: "11 Crianças",
         },
         submit: "Consultar valores",
+        availability: "Consultar disponibilidade",
       },
       review: {
         from: "review retirado do",
@@ -61,8 +62,9 @@ const messages = {
         services: "Serviços",
         location: {
           name: "Localização",
+          slogan: "O Spa para sua alma",
           description:
-            "Saindo de São Paulo, utilize a Rod. Fernão Dias (BR-381) sentido Belo Horizonte. Após a Divisa SP/MG siga por mais 30Km passando pelas cidades de Extrema e Itapeva e entrando em Camanducaia para acessar a estrada Camanducaia/M.Verde de 29Km montanha acima. No Km 13 aproximadamente haverá uma ponte. Após esta ponte entre na segunda à direita e siga por mais 17 Km até o até o portal da Cidade Após chegar ao portal, siga pela avenida Monte Verde, que é a continuação da estrada, até a praça do Bradesco. Você pode seguir em frente, contornando a curva em subida á direita no restaurante Chalana na Rua da Represa e seguindo em frente até uma bifurcação onde você deverá subir a esquerda até chegar na pousada Hospedagem Spa da Alma, que fica no final desta rua! Estamos na Rua da Represa, 1477. ",
+            "Situada nas majestosas montanhas de Monte Verde, Minas Gerais, a Hospedagem Spa da Alma oferece uma experiência única para quem busca se reconectar com a natureza. Nossa pousada é um refúgio encantador, com chalés estrategicamente espaçados no topo da montanha, proporcionando vistas deslumbrantes. Ao cair da tarde, o espetáculo do pôr do sol sobre as montanhas e a floresta se mistura com os ritmos naturais da brisa, criando uma experiência visual única. Além disso, os hóspedes têm a oportunidade de vivenciar a fauna e a flora locais, avistando desde esquilos a tucanos. Você e seu pet são muito bem-vindos para desfrutar de todas as nossas comodidades.",
         },
         differentials: "Nossos diferenciais",
         about_us: "Conheça nossa hospedagem",
