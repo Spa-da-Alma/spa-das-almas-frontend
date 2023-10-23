@@ -206,7 +206,7 @@ function Home() {
           <h3 className="title">{i18n.t("titles.differentials")}</h3>
         </div>
         <div>
-          <ul className="grid grid-cols-2 md:flex md:justify-center gap-8">
+          <ul className="grid grid-cols-2 md:flex md:flex-wrap md:justify-center gap-8">
             {differentials.map((differential, index) => (
               <li
                 className="flex flex-col text-center items-center"
@@ -250,8 +250,8 @@ function Home() {
           <h3 className="title">{i18n.t("titles.location.name")}</h3>
         </div>
         <div className="p-4 md:px-8 lg:px-12">
-          <div className="flex flex-col md:flex-row justify-center items-center gap-4 ">
-            <div className="text-center md:text-left  md:w-1/4 lg:1/3">
+          <div className="flex flex-col lg:flex-row justify-center items-center gap-4 ">
+            <div className="text-center md:text-left  lg:w-1/4 lg:1/3">
               <div className="flex flex-col px-4">
                 <h2 className="text-[#1f2937] font-bold text-3xl mb-2">
                   {i18n.t("titles.location.slogan")}
