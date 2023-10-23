@@ -3,6 +3,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import reviews from "../../mocks/reviews";
 import differentials from "../../mocks/differentials";
+import about_us from "../../mocks/about_us";
 import { i18n } from "../../translate/i18n";
 import ReviewCard from "./components/ReviewCard";
 import { Link } from "react-router-dom";
@@ -22,22 +23,6 @@ function Home() {
   const [adults, setAdults] = useState(2);
   const [children, setChildren] = useState(0);
   const actual_date = new Date().toISOString().split("T")[0];
-  const [showMore, setShowMore] = useState(false);
-
-  const photos = [
-    "/assets/chales/martigny/IMG_0138.JPG",
-    "/assets/chales/martigny/IMG_0048.JPG",
-    "/assets/chales/martigny/IMG_0051.JPG",
-    "/assets/chales/martigny/IMG_0055.JPG",
-    "/assets/chales/martigny/IMG_0056.JPG",
-    "/assets/chales/martigny/IMG_0057.JPG",
-    "/assets/chales/martigny/IMG_0058.JPG",
-    "/assets/chales/martigny/IMG_0061.JPG",
-    "/assets/chales/martigny/IMG_0065.JPG",
-    "/assets/chales/martigny/IMG_0066.JPG",
-    "/assets/chales/martigny/IMG_0067.JPG",
-    "/assets/chales/martigny/IMG_0068.JPG",
-  ];
 
   const handleFormSubmit = (e) => {
     e.preventDefault();
@@ -241,18 +226,18 @@ function Home() {
           </ul>
         </div>
         <div className="p-4 md:px-8 lg:px-12">
-          <h3 className="title">{i18n.t("titles.about_us")}</h3>
+          <h3 className="title">{i18n.t("titles.about_us.title")}</h3>
         </div>
         <div className="p-4 md:px-8 lg:px-12">
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-            {photos.map((photo, index) => (
+            {about_us.map((image, index) => (
               <Link to="/sobre-nos">
                 <div
                   key={index}
                   className="bg-white rounded shadow-lg overflow-hidden p-2"
                 >
                   <img
-                    src={photo}
+                    src={image}
                     alt={`Imagem ${index + 1}`}
                     className="w-full h-48 object-cover rounded"
                   />

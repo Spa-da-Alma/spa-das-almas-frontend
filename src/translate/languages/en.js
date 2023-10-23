@@ -67,7 +67,13 @@ const messages = {
             "Located in the majestic mountains of Monte Verde, Minas Gerais, Hospedagem Spa da Alma offers a unique experience for those looking to reconnect with nature. Our inn is a charming retreat with chalets strategically spaced on the mountaintop, providing breathtaking views. As the evening approaches, the spectacle of the sunset over the mountains and the forest blends with the natural rhythms of the breeze, creating a one-of-a-kind visual experience. Additionally, guests have the opportunity to experience the local wildlife and flora, spotting everything from squirrels to toucans. You and your pet are very welcome to enjoy all of our amenities.",
         },
         differentials: "Our differentials",
-        about_us: "Get to know our accommodation",
+        about_us: {
+          title: "Get to know our accommodation",
+          header: "Find out more about us",
+          p1: 'Located in Monte Verde-MG, Hospedagem Spa "da Alma" aims to be a small guesthouse in the middle of a large green and wooded area. Chalets are set apart from each other at the top of the mountain and surrounded by the indescribable beauty of the region.',
+          p2: 'It was designed to bring together different sensations and feelings that give visitors a truly unique experience. unique experience. At sunset, the landscape becomes a challenge for the senses. the natural rhythms of the breeze and the natural spectacle of the sunset, mountain and forest. natural spectacle of sunset, mountain and forest, becoming a single optical sensation.',
+          p3: 'This accumulation of sensations awakened by coming into contact with the with the local fauna and flora. This experience is with the wonderful opportunity to spot squirrels, monkeys, wild rabbits and even toucans. Arriving in Monte Verde and being able to enjoy all these pleasures and particularities of the region, is to to return to our most primitive wisdom and most natural contact with the land. with the earth. Your pet is welcome at our pousada, just let us know when you make your reservation. when you make your reservation to find out the details!',
+        },
       },
       paragraphs: {
         see_more: "See more",

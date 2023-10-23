@@ -67,8 +67,13 @@ const messages = {
             "Situada nas majestosas montanhas de Monte Verde, Minas Gerais, a Hospedagem Spa da Alma oferece uma experiência única para quem busca se reconectar com a natureza. Nossa pousada é um refúgio encantador, com chalés estrategicamente espaçados no topo da montanha, proporcionando vistas deslumbrantes. Ao cair da tarde, o espetáculo do pôr do sol sobre as montanhas e a floresta se mistura com os ritmos naturais da brisa, criando uma experiência visual única. Além disso, os hóspedes têm a oportunidade de vivenciar a fauna e a flora locais, avistando desde esquilos a tucanos. Você e seu pet são muito bem-vindos para desfrutar de todas as nossas comodidades.",
         },
         differentials: "Nossos diferenciais",
-        about_us: "Conheça nossa hospedagem",
-
+        about_us: {
+          title: "Conheça nossa hospedagem",
+          header: "Saiba mais sobre nós",
+          p1: 'Localizada em Monte Verde-MG, a Hospedagem Spa “da Alma” tem como propósito ser uma pequena pousada, em meio a uma ampla área verde e arborizada. Chalés distantes uns dos outros no topo da montanha e rodeados pela beleza indescritível da região.',
+          p2: "Foi projetada de modo a reunir diferentes sensações e sentimentos que permitem a seus visitantes uma experiência verdadeiramente única. Ao pôr do sol, a paisagem se converte num desafio para os sentidos que se mistura com os ritmos naturais da brisa e o espetáculo natural do pôr do sol, montanha e floresta, tranformando-se numa só sensação ótica.",
+          p3: "Este acúmulo de sensações que se despertam ao entrar em contato com fauna e flora do local. Esta experiência se completa mais ainda com a maravilhosa oportunidade de avistar esquilos, macacos, coelhos selvagens e até tucanos. Chegar em Monte Verde e poder desfrutar de todos esses prazeres e particularidades da região, é voltar à nossa sabedoria mais primitiva e ao contato mais natural com a terra. Seu pet é bem-vindo na nossa pousada, nos informe no momento da reserva para conhecer os detalhes!",
+        },
       },
       paragraphs: {
         see_more: "Veja mais",
