@@ -72,7 +72,7 @@ function Header() {
             {activeMenu ? (
               <AiOutlineClose
                 size={30}
-                color="#0f172a"
+                color="#FAFAFA"
                 className="fixed right-5 top-6"
               />
             ) : (
@@ -112,26 +112,30 @@ function Header() {
             )}
           </div>
           {activeMenu && (
+            <div className="fixed top-0 right-0 min-w-screen min-h-screen z-20 flex">
+            <div className="w-[40vw] min-h-screen bg-white opacity-60 "></div>
             <div
-              className="fixed min-h-screen w-[60vw] right-0 top-0 shadow-xl pt-[30%] px-6 pb-6 z-20 bg-white md:hidden"
+              className="min-h-screen w-[60vw] shadow-xl pt-[30%] px-6 pb-6  bg-gray-900 md:hidden"
               onBlur={() => setActiveMenu(false)}
-            >
+              >
               <ul className="flex flex-col gap-4">
                 {items.map((item, index) => (
                   <Link
-                    to={`${item.path}`}
-                    className="text-xl text-gray-950"
-                    key={index}
-                    onClick={() => setActiveMenu(false)}
+                  to={`${item.path}`}
+                  className="text-xl text-[#fafafa]"
+                  key={index}
+                  onClick={() => setActiveMenu(false)}
                   >
                     <li className="flex items-center gap-2">
-                      {item.icon && <item.icon size={25} color="#1f2937" />}
+                      {item.icon && <item.icon size={25} color="#fafafa" />}
                       {item.name}
                     </li>
                   </Link>
                 ))}
               </ul>
             </div>
+          </div>
+
           )}
         </div>
         <nav className="hidden md:block bg-gray-800">

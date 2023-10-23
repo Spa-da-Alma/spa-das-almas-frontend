@@ -48,6 +48,11 @@ function Chales() {
     }));
   };
 
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }
+  ,[])
+
   return (
     <div className="relative">
       <div className={`${selectedImageCottage && "opacity-20"} w-full`}>

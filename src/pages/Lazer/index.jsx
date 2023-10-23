@@ -4,8 +4,14 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import lazer from "../../mocks/leisure";
+import { useEffect } from "react";
 
 function Lazer() {
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }
+  ,[])
   return (
     <>
       <div className="w-full py-12">

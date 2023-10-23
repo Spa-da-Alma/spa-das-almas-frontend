@@ -24,3 +24,7 @@
 .grid-image {
   @apply h-full w-full object-cover rounded-md;
 }
+
+.wrap {
+  overflow-wrap : anywhere;
+}

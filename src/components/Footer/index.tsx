@@ -3,6 +3,7 @@ import { AiFillInstagram, AiFillFacebook } from "react-icons/ai";
 import { IoLogoWhatsapp } from "react-icons/io";
 import { HiMail } from "react-icons/hi";
 import { i18n } from "../../translate/i18n";
+import { wrap } from "module";
 
 function Footer() {
   return (
@@ -55,7 +56,7 @@ function Footer() {
           </h3>
           <ul className="my-2 flex flex-col gap-2">
             <li>
-              <a className="flex gap-2" href="mailto:hospedag@hospedagemspadaalma.com.br?subject=Reserva no Spa da Alma&body=Olá Spa da Alma, quero realizar uma reserva!">
+              <a className="flex gap-2 wrap"  href="mailto:hospedag@hospedagemspadaalma.com.br?subject=Reserva no Spa da Alma&body=Olá Spa da Alma, quero realizar uma reserva!">
                 <HiMail size={24} color="white" />
                 <span className="text-gray-400">hospedag@hospedagemspadaalma.com.br</span>
               </a>
