@@ -1,34 +1,40 @@
-import { GoHomeFill } from "react-icons/go";
+import { AiFillHome } from "react-icons/ai";
 import { HiLocationMarker } from "react-icons/hi";
-import { BsHouseHeartFill } from "react-icons/bs";
-import { PiSunglassesFill } from "react-icons/pi";
+import { MdCottage } from "react-icons/md";
 import { BsFillChatSquareHeartFill } from "react-icons/bs";
+import { SiFunimation } from "react-icons/si";
 import { i18n } from "../translate/i18n";
+import { TbMessageCircleSearch } from "react-icons/tb";
 
 export default [
   {
     name: i18n.t("items.home"),
-    icon: GoHomeFill,
+    icon: AiFillHome,
     path: "",
+    target: "_self",
   },
   {
     name: i18n.t("items.cottage"),
-    icon: BsHouseHeartFill,
-    path: "chales",
-  },
-  {
-    name: i18n.t("items.location"),
-    icon: HiLocationMarker,
-    path: "localizacao",
+    icon: MdCottage,
+    path: "/chales",
+    target: "_self",
   },
   {
     name: i18n.t("items.leisure"),
-    icon: PiSunglassesFill,
-    path: "/",
+    icon: SiFunimation,
+    path: "/lazer",
+    target: "_self",
+  },
+  {
+    name: i18n.t("items.about_us"),
+    icon: TbMessageCircleSearch,
+    path: "/sobre-nos",
+    target: "_self",
   },
   {
     name: i18n.t("items.book"),
     icon: BsFillChatSquareHeartFill,
-    path: "/",
+    path: "https://hbook.hsystem.com.br/Booking?companyId=5f28e3fbab41d429a42ac74c",
+    target: "_blank",
   },
 ];
