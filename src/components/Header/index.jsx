@@ -113,7 +113,7 @@ function Header() {
           </div>
           {activeMenu && (
             <div className="fixed top-0 right-0 min-w-screen min-h-screen z-20 flex">
-            <div className="w-[40vw] min-h-screen bg-white opacity-60 "></div>
+            <div className="w-[40vw] min-h-screen bg-white opacity-60" onClick={() => setActiveMenu(false)}></div>
             <div
               className="min-h-screen w-[60vw] shadow-xl pt-[30%] px-6 pb-6  bg-gray-900 md:hidden"
               onBlur={() => setActiveMenu(false)}
