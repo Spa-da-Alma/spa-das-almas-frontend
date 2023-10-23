@@ -1,4 +1,4 @@
-import { AiFillHome } from "react-icons/ai";
+import { AiFillHome, AiFillMessage } from "react-icons/ai";
 import { HiLocationMarker } from "react-icons/hi";
 import { MdCottage } from "react-icons/md";
 import { BsFillChatSquareHeartFill } from "react-icons/bs";
@@ -27,7 +27,7 @@ export default [
   },
   {
     name: i18n.t("items.about_us"),
-    icon: TbMessageCircleSearch,
+    icon: AiFillMessage,
     path: "/sobre-nos",
     target: "_self",
   },
