@@ -56,13 +56,21 @@ function Footer() {
           </h3>
           <ul className="my-2 flex flex-col gap-2">
             <li>
-              <a className="flex gap-2 wrap"  href="mailto:hospedag@hospedagemspadaalma.com.br?subject=Reserva no Spa da Alma&body=Olá Spa da Alma, quero realizar uma reserva!">
+              <a
+                className="flex gap-2 wrap"
+                href="mailto:hospedag@hospedagemspadaalma.com.br?subject=Reserva no Spa da Alma&body=Olá Spa da Alma, quero realizar uma reserva!"
+              >
                 <HiMail size={24} color="white" />
-                <span className="text-gray-400">hospedag@hospedagemspadaalma.com.br</span>
+                <span className="text-gray-400">
+                  hospedag@hospedagemspadaalma.com.br
+                </span>
               </a>
             </li>
             <li>
-              <a className="flex gap-2">
+              <a
+                className="flex gap-2"
+                href="https://api.whatsapp.com/send?phone=553534381131&text=Ol%C3%A1!%20%F0%9F%91%8B%20estou%20interessado%20em%20me%20hospedar%20no%20Spa%20da%20Alma.%20Gostaria%20de%20obter%20mais%20informa%C3%A7%C3%B5es%20sobre%20disponibilidade%2C%20pre%C3%A7os%20e%20comodidades."
+              >
                 <IoLogoWhatsapp size={24} color="white" />
                 <span className="text-gray-400">+55 (35) 3438-1131</span>
               </a>
