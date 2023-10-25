@@ -3,7 +3,6 @@ import { AiFillInstagram, AiFillFacebook } from "react-icons/ai";
 import { IoLogoWhatsapp } from "react-icons/io";
 import { HiMail } from "react-icons/hi";
 import { i18n } from "../../translate/i18n";
-import { wrap } from "module";
 
 function Footer() {
   return (
